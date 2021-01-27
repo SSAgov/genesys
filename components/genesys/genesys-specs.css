@@ -1,0 +1,41 @@
+/* Genesys Spec Doc Style Rules */
+
+html {
+    font-size: 16px !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px !important;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 1.6em;
+    border-bottom: 1px solid black;
+}
+
+h2 {font-size: 1.2em;}
+
+strong {font-weight: bold;}
+
+p {font-weight: normal;}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: darkgray;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

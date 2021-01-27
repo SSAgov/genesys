@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:e}=window.UefWebComponents;class t{render(){return e("slot",null)}static get is(){return"uef-notice-body"}static get encapsulation(){return"shadow"}}export{t as UefNoticeBody};

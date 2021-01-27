@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="env" content="dev" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Social Security</title>
+    <style> @import url(https://www.socialsecurity.gov/flexweb/rel_5_0/css/import.css);</style>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/libs/jquery/jquery.min.js"></script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.namespace.js"></script>
+    <script>SSA.deployment.setURL("https://www.socialsecurity.gov/flexweb/rel_5_0/");</script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.fn.setup.js"></script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/libs/headjs/head.min.js" data-headjs-load="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.flexweb.loader.js"></script>
+</head>
+<!-- Valid body ids are "uef-app" for application pages and "fw-info" for static pages -->
+<body class="uef-theme-std uef-theme-lightbox uef-theme-docViewer" data-uef-disable-page-exit="true"
+    data-uef-disable-page-timeout="true" data-uefid="uef-theme-std" data-uef-lightbox-fn-close-icon="true">
+    <!-- Message to be displayed when JavaScript is Off -->
+    <noscript>
+        <div id="uef-tmpl-javaScriptOff">
+            <div class="uef-notice uef-important" data-uefid="uef-no-imp">
+                <div class="uef-notice-row hd">
+                    <div class="uef-notice-content">
+                        <h4 tabindex="0">JavaScript is required to use this service</h4>
+                    </div>
+                </div>
+                <div class="uef-notice-row">
+                    <div class="uef-notice-content">
+                        <p>Social Security's online services are designed to be accessible and user-friendly. That is why we require all web browsers to have JavaScript enabled when working with our online services.</p>
+                        <p>To use this service, please adjust your web browser settings to enable JavaScript, then <a href="#">try again</a>.</p>
+                        <p>If you can't or don't want to enable JavaScript, you can return to the <a href="http://www.ssa.gov">Social Security home page</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    <div id="uef-tmpl-content-wrapper" class="hide">
+        <div id="uef-tmpl-content" role="main">
+            <!-- the fixed header section goes here -->
+            <div class="uef-container module uef-docViewer-fixed-header" data-uefid="uef-co-bsc">
+                <div class="uef-container-row hd uef-container-separator">
+                    <div class="uef-container-content">
+                        <h3>[Document Title]</h3>
+                    </div>
+                </div>
+                <div class="uef-container-row uef-container-separator uef-container-shaded">
+                    <div class="uef-container-content">
+                        <input type="submit" class="uef-btn uef-print-page" value="[Print]" />
+                        <input type="submit" class="uef-btn" value="[Save]" />
+                        <!-- More button -->
+                        <span class="uef-icon-dropdown-container">
+                            <input type="submit" class="uef-btn uef-icon-dropdown-btn" value="More" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                            <ul class="uef-icon-dropdown-menu">
+                                <li><a href="#1">[Option with no icon]</a></li>
+                                <li><a href="template-moreinfo.htm" rel="help" data-uef-window-mode="lightbox" target="_blank" title="Sample Help Window">Sample Help Window</a></li>
+                            </ul>
+                        </span>                        
+                    </div>
+                </div>
+            </div>
+            <!-- end of fixed header section -->
+            <!-- beginning of main content section -->
+            <div class="uef-container module" data-uefid="uef-co-bsc">
+                <div class="uef-container-row uef-container-separator uef-docViewer-content">
+                    <div class="uef-container-content">
+                        <p>[INSERT PAGE CONTENT]</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of  of main content section -->
+            <!-- end #uef-tmpl-content -->
+        </div>
+        <!-- end #uef-tmpl-content-wrapper -->
+    </div>
+</body>
+</html>

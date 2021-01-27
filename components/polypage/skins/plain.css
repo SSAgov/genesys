@@ -1,0 +1,38 @@
+body div#pp_options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1;
+  background: #f0f0f0;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  overflow:hidden;
+}
+body div#pp_options .closer {
+  color: #999;
+  padding:5px;
+  margin-left:-4px;
+  text-decoration:none;
+  font-weight:bold;
+}
+body div#pp_options p {
+  display: inline;
+  color: #bbb;  
+}
+body div#pp_options ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+body div#pp_options li {
+  display: inline;
+  padding: 0 .3em;
+}
+body div#pp_options li a {
+  color: #999;
+}
+body div#pp_options li a.on {
+  color: #000;
+}

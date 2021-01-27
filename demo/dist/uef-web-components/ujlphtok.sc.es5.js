@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+UefWebComponents.loadBundle("ujlphtok",["exports"],function(e){var n=window.UefWebComponents.h,o=function(){function e(){}return e.prototype.render=function(){return n("slot",null)},Object.defineProperty(e,"is",{get:function(){return"uef-notice-body"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"shadow"},enumerable:!0,configurable:!0}),e}();e.UefNoticeBody=o,Object.defineProperty(e,"__esModule",{value:!0})});

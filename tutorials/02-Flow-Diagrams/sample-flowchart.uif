@@ -1,0 +1,32 @@
+[Home]
+intro
+--
+benefits
+--
+Select Pattern Library
+==> Pattern Library
+
+[Pattern Library]
+list of categorized patterns
+--
+select SSN
+==> SSN
+
+[SSN]
+pattern info
+sample
+--
+action
+=={api}=> page
+[page]
+see
+--
+action
+==> Home
+
+
+
+
+
+
+

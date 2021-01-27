@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:e}=window.UefWebComponents;class t{constructor(){this.selected=!1}componentDidLoad(){var e=document.createElement("option");e.text=this.label,e.value=this.value,e.selected=this.selected,this.optionEl.parentElement.insertAdjacentElement("afterbegin",e),this.optionEl.remove()}render(){return null}static get is(){return"uef-option"}static get properties(){return{label:{type:String,attr:"label"},optionEl:{elementRef:!0},selected:{type:Boolean,attr:"selected"},value:{type:String,attr:"value"}}}}export{t as UefOption};

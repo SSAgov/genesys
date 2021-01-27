@@ -1,0 +1,1605 @@
+<!doctype html>
+<html lang="en" data-fwMobileEnabled="true">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="env" content="local" />
+    <meta name="application-name" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genesys Features Demo</title>
+    <style>
+        @import url(https://www.socialsecurity.gov/flexweb/rel_5_0/css/import.css);
+    </style>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/libs/jquery/jquery.min.js"></script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.namespace.js"></script>
+    <script>
+        SSA.deployment.setURL("https://www.socialsecurity.gov/flexweb/rel_5_0/");
+    </script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.fn.setup.js"></script>
+    <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/libs/headjs/head.min.js" data-headjs-load="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.flexweb.loader.js"></script>
+
+    <!-- UEF 2.1 -->
+    <!--<link rel="stylesheet" href="../components/uef-2.1/uef.css"/>-->
+    <!--<script src="../components/uef-2.1/uef-web-components.js"></script>-->
+
+    <!-- Mermaid Charting & Diagramming Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0-alpha.4/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true
+        });
+    </script>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+
+    <!-- START: Mavo Library ============================== -->
+    <link rel="stylesheet" href="../components/mavo/mavo.css" />
+    <script src="../components/mavo/mavo.es5.min.js"></script>
+    <!-- END:   Mavo Library ============================== -->
+
+    <!-- START: A/B Testing Library ============================ -->
+    <script src="../components/ab-testing/simpleab.min.js"></script>
+    <!-- END:   A/B Testing Library ============================ -->
+
+    <!-- START: Add Intro.js Library =========================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
+    <!-- END:   Add Intro.js Library =========================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gremlins.js/0.1.0/gremlins.min.js"></script>
+
+    <!-- START: Paper CSS Library ============================== -->
+    <link rel="alternate stylesheet" href="https://unpkg.com/papercss/dist/paper.min.css" title="paper" />
+    <!-- END:   Paper CSS Library ============================== -->
+
+    <!-- PolyPage -->
+    <link rel="stylesheet" href="../components/polypage/skins/default.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+    <!--<script src="../components/polypage/lib/jquery.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="../components/polypage/lib/polypage.jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../components/polypage/lib/events.polypage.jquery.js"></script>
+    <script src="../components/polypage/lib/cookie.polypage.jquery.js"></script>
+    <script src="../components/polypage/lib/gui.polypage.jquery.js"></script>
+    <script src="../components/polypage/lib/keyboard.polypage.jquery.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            $('body').polypage();
+        });
+    </script>
+
+</head>
+
+<body mv-app="genesys-demo" mv-storage="local" mv-autosave="0" mv-plugins="clear" class="uef-theme-std" data-uef-disable-page-exit="true" data-uef-disable-page-timeout="true">
+    <header class="uef-print">
+        <div id="uef-tmpl-header" role="banner">
+            <a id="uef-tmpl-skipNav" href="#uef-tmpl-content" accesskey="K">Skip to Content</a>
+            <div id="uef-tmpl-logo">
+            </div>`
+            <div id="uef-tmpl-websiteTitle">
+                <h1 data-lang="Social Security" data-lang-es="Seguridad Social" data-lang-ru="Социальная защита"></h1>
+            </div>
+            <div id="uef-tmpl-global">
+                <div id="uef-tmpl-global-options">
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="uef-tmpl-nav" mv-expressions="none">
+        <a id="uef-tmpl-nav-show-btn" href="#uef-tmpl-nav" data-ajax="false">Menu</a>
+        <div class="uef-tmpl-nav-content">
+            <ul id="uef-tmpl-nav-menu" role="navigation">
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 1" data-lang-es="Pestaña 1" data-lang-ru="Вкладка 1"></a>
+                </li>
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 2" data-lang-es="Pestaña 2" data-lang-ru="Вкладка 2"></a>
+                </li>
+                <li class="uef-list-selected">
+                    <a href="" target="_self" title="" class="uef-navLink" data-lang="Tab 3" data-lang-es="Pestaña 3" data-lang-ru="Вкладка 3"></a>
+                </li>
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 4" data-lang-es="Pestaña 4" data-lang-ru="Вкладка 4"></a>
+                </li>
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 5" data-lang-es="Pestaña 5" data-lang-ru="Вкладка 5"></a>
+                </li>
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 6" data-lang-es="Pestaña 6" data-lang-ru="Вкладка 6"></a>
+                </li>
+                <li>
+                    <a href="" target="_self" class="uef-navLink" data-lang="Tab 7" data-lang-es="Pestaña 7" data-lang-ru="Вкладка 7"></a>
+                </li>
+            </ul>
+        </div>
+        <a id="uef-tmpl-nav-hide-btn" href="#uef-tmpl-nav-hide" data-ajax="false">Menu</a>
+    </nav>
+    <noscript>
+        <div id="uef-tmpl-javaScriptOff">
+            <div class="uef-grids-row">
+                <div class="uef-grids-column-3-4 uef-grids-column ">
+                    <div class="uef-grids-content">
+                        <div class="uef-warning uef-notice">
+                            <div class="uef-notice-row hd">
+                                <div class="uef-notice-content">
+                                    <h4 tabindex="0">
+                                        JavaScript is required to use this service</h4>
+                                </div>
+                            </div>
+                            <div class="uef-notice-row">
+                                <div class="uef-notice-content">
+                                    <p>Social Security's online services are designed to be accessible and user-friendly. That
+                                        is why we require all web browsers to have JavaScript enabled when working with our
+                                        online services.</p>
+                                    <p>To use this service, please adjust your web browser settings to enable JavaScript, then
+                                        <a href="/UEF2Web/viewAllPatterns.action">try again</a>.</p>
+                                    <p>If you can't or don't want to enable JavaScript, you can return to the
+                                        <a href="https://www.socialsecurity.gov/">Social Security home page</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    <div id="uef-tmpl-content-wrapper" class="hide">
+        <script>
+            var jsOffMsg = document.getElementById("fw-JavaScriptOff");
+            if (jsOffMsg) {
+                jsOffMsg.parentNode.removeChild(jsOffMsg);
+            }
+            var mainSection = document.getElementById("uef-tmpl-content-wrapper");
+            if (mainSection) {
+                $(mainSection).removeClass("hide");
+            }
+        </script>
+        <div id="uef-tmpl-page-title" class="section">
+            <h2 data-step="1" data-intro="<h1>Welcome to the Genesys Design Kit</h1><br /><p>Genesys is the prototyping tool built on top of the free, open-source Visual Studio Code.</p><p>Completely open, infinitely extensible, and the only prototyping tool with built-in accessibility checking.</p>This page will show you what Genesys can do. Let's get started."
+                data-lang="Genesys Features Demo" data-lang-es="Funciones de Genesys Demo" data-lang-ru="Демо-версия Genesys"></h2>
+        </div>
+        <div id="uef-tmpl-content" role="main">
+            <div class="uef-grids-row">
+                <div class="uef-grids-column-1 uef-grids-column ">
+                    <div class="uef-grids-content">
+                        <!-- START: Grid-50-50 ================================================================ -->
+                        <div class="uef-grids-row">
+                            <div class="uef-grids-column-1-2 uef-grids-column">
+                                <div class="uef-grids-content">
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3 data-step="2" data-intro="<p>Genesys supports all UEF templates, patterns and variations.</p><p>In fact, Genesys prototypes use the same underlying code as final production apps, so everything you see and interact with is exact."
+                                                    data-lang="UEF 2.0 & 2.1 Support" data-lang-es="UEF Apoyo" data-lang-ru="Поддержка UEF"></h3>
+                                                <!-- START: Genesys Note ======================================= -->
+                                                <span class="gns-note" data-lang="Genesys supports UEF prototyping. Your prototypes will look exactly like they will in production. If using UEF 2.1, they are the production UI."
+                                                    data-lang-es="Genesys es compatible con el prototipo de UEF. Sus prototipos se verán exactamente como lo harán en producción."
+                                                    data-lang-ru="Genesys поддерживает прототипирование UEF. Ваши прототипы будут выглядеть точно так, как они будут в производстве."></span>
+                                                <!-- END :  Genesys Note ======================================= -->
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <!-- START: Textbox ================================================================ -->
+                                                <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                    <div class="uef-pattern-label">
+                                                        <label for="textbox-test" id="textbox-test-PatternLabel" data-lang="Pattern Label" data-lang-es="Etiqueta de Patrón" data-lang-ru="Ярлык шаблона"></label>
+                                                    </div>
+                                                    <div class="uef-pattern-content">
+                                                        <input size="40" maxlength="40" name="textbox-test" aria-labelledby="textbox-test-PatternLabel textbox-test-Instructions textbox-test-BottomLabel"
+                                                            id="textbox-test" type="text" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <!-- END: Textbox ================================================================ -->
+                                                <!-- START: Checklist ====================================================================== -->
+                                                <fieldset class="uef-input-compound">
+                                                    <div class="uef-checkList uef-input" data-uefID="uef-in-chkLst">
+                                                        <fieldset>
+                                                            <div class="uef-pattern-label">
+                                                                <div class="legend">
+                                                                    <span id="test-PatternLabel" data-lang="Pattern Label" data-lang-es="Etiqueta de Patrón"
+                                                                        data-lang-ru="Ярлык шаблона"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="uef-pattern-content">
+                                                                <ol class="uef-inputList">
+                                                                    <li>
+                                                                        <input type="checkbox" name="test-Item_1" id="test-item_1" value="1" aria-labelledby="test-PatternLabel test-Instructions test-item_1Label"
+                                                                        />
+                                                                        <label for="test-item_1" id="test-item_1Label">
+                                                                            <span data-lang="Option 1" data-lang-es="Opción 1"
+                                                                                data-lang-ru="Опция 1"></span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <!-- START: Checklist Item ====================================================================== -->
+                                                                    <li>
+                                                                        <input type="checkbox" name="test2-item" id="test2-item" value="1" aria-labelledby="test2-PatternLabel test2-Instructions test2-item_Label"
+                                                                        />
+                                                                        <label for="test2-item" id="test2-item-Label">
+                                                                            <span data-lang="Option 2" data-lang-es="Opción 2"
+                                                                                data-lang-ru="Опция 2"></span>
+                                                                            <div class="uef-supportInfo" data-lang="Support Information" data-lang-es="Información de Soporte" data-lang-ru="Информация о поддержке"></div>
+                                                                        </label>
+                                                                    </li>
+                                                                    <!-- END: Checklist Item ====================================================================== -->
+                                                                </ol>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div data-uef-form-display-trigger="otherTextBox1Switch">
+                                                        <div class="uef-textBox uef-input" data-uefID="uef-in-txtBx">
+                                                            <div class="uef-pattern-label">
+                                                                <label for="var_checklistitem_other" id="uef-textBox1PatternLabel">Please Specify</label>
+                                                            </div>
+                                                            <div class="uef-pattern-content">
+                                                                <input name="var_CheckListItem_Other" aria-labelledby="uef-textBox1PatternLabel" id="var_checklistitem_other" type="text"
+                                                                    autocomplete="off" size="20" maxlength="20" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                <!-- END: Checklist ====================================================================== -->
+                                                <!-- START: VideoTeaser ================================================================ -->
+                                                <div class="uef-video" data-uefid="uef-li-vdTsr">
+                                                    <a rel="video" target="_blank" href="#" style="background-image:url(http://satyr.io/?width=75&height=60&text=Video&texture=cross);">
+                                                        <h4 data-lang="Video Title" data-lang-es="Titulo del Video" data-lang-ru="Название видео"></h4>
+                                                        <p>
+                                                            <span data-lang="Helpful hints for completing this application" data-lang-es="Consejos útiles para completar esta aplicación"
+                                                                data-lang-ru="Полезные советы по заполнению этого приложения"></span>
+                                                        </p>
+                                                        <p class="uef-videoTime">mm:ss</p>
+                                                    </a>
+                                                </div>
+                                                <!-- END: VideoTeaser ================================================================ -->
+                                                <!-- START: AddressUS ================================================================ -->
+                                                <div class="uef-addressDomestic uef-input" data-uefid="uef-in-adrsUS" mv-expressions="none">
+                                                    <fieldset>
+                                                        <div class="uef-pattern-label">
+                                                            <div class="legend">
+                                                                <span id="insert-id-DomesticPatternLabel">
+                                                                    <span class="uef-required uef-icon-asterisk"></span>Owner′s Address</span>
+                                                            </div>
+                                                            <div id="insert-id-DomesticInstructions" class="uef-instructionText">Instruction Text</div>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <fieldset class="uef-streetLines">
+                                                                <div class="legend hide-offscreen">
+                                                                    <span>[Owner′s] Address</span>
+                                                                </div>
+                                                                <div class="uef-multipartItem">
+                                                                    <label for="insert-id-addressline1_1" id="insert-id-addressline1_1LeftLabel">
+                                                                        <span class="uef-required uef-icon-asterisk"></span>Line 1
+                                                                    </label>
+                                                                    <input name="insert-id-AddressLine1_1" aria-labelledby="insert-id-DomesticPatternLabel insert-id-DomesticInstructions insert-id-addressline1_1LeftLabel"
+                                                                        id="insert-id-addressline1_1" type="text" autocomplete="off"
+                                                                        size="30" maxlength="30">
+                                                                </div>
+                                                                <div class="uef-multipartItem">
+                                                                    <label for="insert-id-addressline2_1" id="insert-id-addressline2_1LeftLabel">Line 2</label>
+                                                                    <input name="insert-id-AddressLine2_1" aria-labelledby="insert-id-addressline2_1LeftLabel" id="insert-id-addressline2_1"
+                                                                        type="text" autocomplete="off" size="30" maxlength="30">
+                                                                </div>
+                                                                <div class="uef-multipartItem">
+                                                                    <label for="insert-id-addressline3_1" id="insert-id-addressline3_1LeftLabel">Line 3</label>
+                                                                    <input name="insert-id-AddressLine3_1" aria-labelledby="insert-id-addressline3_1LeftLabel" id="insert-id-addressline3_1"
+                                                                        type="text" autocomplete="off" size="30" maxlength="30">
+                                                                </div>
+                                                                <div class="uef-multipartItem">
+                                                                    <label for="insert-id-addressline4_1" id="insert-id-addressline4_1LeftLabel">Line 4</label>
+                                                                    <input name="insert-id-AddressLine4_1" aria-labelledby="insert-id-addressline4_1LeftLabel" id="insert-id-addressline4_1"
+                                                                        type="text" autocomplete="off" size="30" maxlength="30">
+                                                                </div>
+                                                            </fieldset>
+                                                            <div class="uef-multipartItem">
+                                                                <label for="insert-id-addresscity_1" id="insert-id-addresscity_1TopLabel">
+                                                                    <span class="uef-required uef-icon-asterisk"></span>City/Town
+                                                                </label>
+                                                                <input name="insert-id-AddressCity_1" aria-labelledby="insert-id-addresscity_1TopLabel" id="insert-id-addresscity_1" type="text"
+                                                                    autocomplete="off" size="20" maxlength="20">
+                                                            </div>
+                                                            <div class="uef-multipartItem">
+                                                                <label for="insert-id-addressstate_1" id="insert-id-addressstate_1TopLabel">
+                                                                    <span class="uef-required uef-icon-asterisk"></span>State
+                                                                </label>
+                                                                <select size="1" name="insert-id-AddressState_1" aria-labelledby="insert-id-addressstate_1TopLabel" id="insert-id-addressstate_1">
+                                                                    <option value="">--</option>
+                                                                    <option value="1">Alabama</option>
+                                                                    <option value="2">Alaska</option>
+                                                                    <option value="3">American Samoa</option>
+                                                                    <option value="4">Arizona</option>
+                                                                    <option value="5">Arkansas</option>
+                                                                    <option value="60">Armed Forces Africa (AE)</option>
+                                                                    <option value="61">Armed Forces Americas (AA)</option>
+                                                                    <option value="62">Armed Forces Canada (AE)</option>
+                                                                    <option value="63">Armed Forces Europe (AE)</option>
+                                                                    <option value="64">Armed Forces Middle East (AE)</option>
+                                                                    <option value="65">Armed Forces Pacific (AP)</option>
+                                                                    <option value="6">California</option>
+                                                                    <option value="7">Colorado</option>
+                                                                    <option value="8">Connecticut</option>
+                                                                    <option value="9">Delaware</option>
+                                                                    <option value="10">District of Columbia</option>
+                                                                    <option value="11">Federated States of Micronesia</option>
+                                                                    <option value="12">Florida</option>
+                                                                    <option value="13">Georgia</option>
+                                                                    <option value="14">Guam</option>
+                                                                    <option value="15">Hawaii</option>
+                                                                    <option value="16">Idaho</option>
+                                                                    <option value="17">Illinois</option>
+                                                                    <option value="18">Indiana</option>
+                                                                    <option value="19">Iowa</option>
+                                                                    <option value="20">Kansas</option>
+                                                                    <option value="21">Kentucky</option>
+                                                                    <option value="22">Louisiana</option>
+                                                                    <option value="23">Maine</option>
+                                                                    <option value="24">Marshall Islands</option>
+                                                                    <option value="25">Maryland</option>
+                                                                    <option value="26">Massachusetts</option>
+                                                                    <option value="27">Michigan</option>
+                                                                    <option value="28">Minnesota</option>
+                                                                    <option value="29">Mississippi</option>
+                                                                    <option value="30">Missouri</option>
+                                                                    <option value="31">Montana</option>
+                                                                    <option value="32">Nebraska</option>
+                                                                    <option value="33">Nevada</option>
+                                                                    <option value="34">New Hampshire</option>
+                                                                    <option value="35">New Jersey</option>
+                                                                    <option value="36">New Mexico</option>
+                                                                    <option value="37">New York</option>
+                                                                    <option value="38">North Carolina</option>
+                                                                    <option value="39">North Dakota</option>
+                                                                    <option value="40">Northern Mariana Islands</option>
+                                                                    <option value="41">Ohio</option>
+                                                                    <option value="42">Oklahoma</option>
+                                                                    <option value="43">Oregon</option>
+                                                                    <option value="44">Palau</option>
+                                                                    <option value="45">Pennsylvania</option>
+                                                                    <option value="46">Puerto Rico</option>
+                                                                    <option value="47">Rhode Island</option>
+                                                                    <option value="48">South Carolina</option>
+                                                                    <option value="49">South Dakota</option>
+                                                                    <option value="50">Tennessee</option>
+                                                                    <option value="51">Texas</option>
+                                                                    <option value="52">Utah</option>
+                                                                    <option value="53">Vermont</option>
+                                                                    <option value="55">Virginia</option>
+                                                                    <option value="54">Virgin Islands</option>
+                                                                    <option value="56">Washington</option>
+                                                                    <option value="57">West Virginia</option>
+                                                                    <option value="58">Wisconsin</option>
+                                                                    <option value="59">Wyoming</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="uef-multipartItem">
+                                                                <label for="insert-id-addresszip_1" id="insert-id-addresszip_1TopLabel">
+                                                                    <span class="uef-required uef-icon-asterisk"></span>ZIP Code
+                                                                </label>
+                                                                <input name="insert-id-AddressZip_1" aria-labelledby="insert-id-addresszip_1TopLabel" id="insert-id-addresszip_1" type="text"
+                                                                    autocomplete="off" size="5" maxlength="5">
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                                <!-- END: AddressUS ================================================================ -->
+                                                <!-- START: DocumentViewer-Link ================================================================ -->
+                                                <a href="files/test-docviewer-template.html" rel="docView" data-uef-window-mode="lightbox" data-uef-lightbox-type="uef-documentViewer"
+                                                    id="insert-id" data-uef-lightbox="iframe" data-lang="Sample Document Viewer"
+                                                    data-lang-es="Muestra" data-lang-ru="Образец"></a>
+                                                <!-- END: DocumentViewer-Link ================================================================ -->
+                                                <br />
+                                                <!-- START: Modal-Link ================================================================ -->
+                                                <a href="files/test-uef-more-info.html" data-uef-lightbox-width="450" id="test-lightbox" data-uef-window-mode="lightbox"
+                                                    data-uef-lightbox-type="uef-information">Sample Lightbox</a>
+                                                <!-- END: Modal-Link ================================================================ -->
+                                                <br />
+                                                <!-- START: Modal-Link ================================================================ -->
+                                                <a href="files/test-uef-more-info.html" data-uef-lightbox-width="450" data-uef-window-mode="lightbox" data-uef-lightbox-type="uef-information"
+                                                    id="link-default-modal" data-lang="Default Modal" data-lang-es="Modal Predeterminado"
+                                                    data-lang-ru="По умолчанию Modal"></a>
+                                                <!-- END: Modal-Link ================================================================ -->
+                                                <br />
+                                                <!-- START: Modal-Button ================================================================ -->
+                                                <input type="submit" class="uef-btn uef-btn-secondary" value="Open Modal" name="btnModalTest" id="btnModalTest" href="files/test-uef-more-info.html"
+                                                    data-uef-lightbox-width="450" data-uef-window-mode="lightbox" data-uef-lightbox-type="uef-information">
+                                                <!-- END: Modal-Button ================================================================== -->
+                                                <br />
+                                                <!-- START: Help ================================================================ -->
+                                                <a href="files/test-uef-more-info.html" rel="help" data-uefid="uef-li-hlp" data-uef-window-mode="lightbox" data-uef-lightbox-type="uef-information"
+                                                    id="test-uef-modal.html" data-uef-lightbox="iframe">
+                                                    <span data-lang="Help" data-lang-es="Ayuda" data-lang-ru="Помогите"></span>
+                                                </a>
+                                                <!-- END: Help ================================================================ -->
+                                                <br />
+                                                <!-- START: ShowHide  ================================================================-->
+                                                <div class="uef-toggle-container" data-uef-show-hide-border="false">
+                                                    <a href="#" class="uef-toggle-controller uef-toggle-show" data-uef-toggle-targetid="insert-target-id" data-uef-toggle-defaultcontroller="true"
+                                                        id="uefToggleCtr-insert-toggle-id-1" title="insert-toggle-id, Show">Show something hidden</a>
+                                                    <a href="#" class="uef-toggle-controller uef-toggle-hide hide" data-uef-toggle-targetid="insert-target-id" id="uefToggleCtr-insert-toggle-id-2"
+                                                        title="Hide something shown, Hide">Hide something shown</a>
+                                                    <div class="uef-toggleContainer uef-indentContent hide" id="insert-target-id" data-uefid="uef-li-shwHd" data-uef-toggle-controller-showid="uefToggleCtr-insert-target-id-1"
+                                                        data-uef-toggle-controller-hideid="uefToggleCtr-insert-toggle-id-2">
+                                                        Lorem ipsum dolor sit amet...
+                                                    </div>
+                                                </div>
+                                                <!-- END: ShowHide ================================================================ -->
+                                                <br />
+                                                <!-- START: Agreement ================================================================ -->
+                                                <div class="uef-checkbox uef-checkbox--critical uef-input" data-uefid="uef-in-chkBx">
+                                                    <div class="uef-pattern-label"></div>
+                                                    <div class="uef-pattern-content">
+                                                        <input type="checkbox" name="test-agreement" id="test-agreement" value="Y" aria-labelledby="test-agreement-Label">
+                                                        <label for="test-agreement" id="test-agreement-Label">
+                                                            <div class="uef-checkbox__label">
+                                                                <span class="uef-required uef-icon-asterisk"></span>
+                                                                <span data-lang="I have read and agree with the above statement."
+                                                                    data-lang-es="He leído y acepto la declaración anterior."
+                                                                    data-lang-ru="Я прочитал и согласен с вышеуказанным заявлением."></span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- END: Agreement ================================================================ -->
+                                                <!-- START: Zipcode ================================================================ -->
+                                                <div class="uef-zipCode uef-format-zipCode uef-input" data-uefid="uef-in-zip">
+                                                    <div class="uef-pattern-label">
+                                                        <label for="insert-id" id="insert-id-PatternLabel">Person′s ZIP Code</label>
+                                                        <div id="insert-id-Instructions" class="uef-instructionText">Instruction Text</div>
+                                                    </div>
+                                                    <div class="uef-pattern-content">
+                                                        <input size="10" maxlength="10" name="insert-id" aria-labelledby="insert-id-PatternLabel insert-id-Instructions insert-id-BottomLabel"
+                                                            id="insert-id" type="text" autocomplete="off">
+                                                        <div class="uef-supportText" id="insert-id-BottomLabel">Support Text</div>
+                                                    </div>
+                                                </div>
+                                                <!-- END: Zipcode ================================================================ -->
+                                                <!-- START: ContainerTabs ================================================================ -->
+                                                <div class="uef-container module">
+                                                    <div class="uef-container-row hd">
+                                                        <div class="uef-container-content">
+                                                            <h3 tabindex="0">Container Title</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="uef-container-tabGroup">
+                                                        <div class="uef-container-tab" data-uef-container-tab-label="Tab 1">
+                                                            <div class="uef-container-row">
+                                                                <div class="uef-container-content">
+                                                                    Tab 1 Content
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="uef-container-tab" data-uef-container-tab-label="Tab 2">
+                                                            <div class="uef-container-row">
+                                                                <div class="uef-container-content">
+                                                                    Tab 2 Content
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- ADD ANOTHER TAB? (uef-container-add-tab) -->
+                                                    </div>
+                                                </div>
+                                                <!-- END: ContainerTabs ================================================================ -->
+
+                                                <!-- START: Sub-Navigation ================================================================ -->
+                                                <div data-uefid="uef-na-subNav" data-uef-nav-sub_nav-status_icons="false" data-uef-nav-sub_nav-hide_header="false" class="uef-container uef-tmpl-sub-nav">
+                                                    <div class="uef-container-row hd uef-container-separator">
+                                                        <div class="uef-container-content">
+                                                            <h3 tabindex="0">Foods</h3>
+                                                        </div>
+                                                    </div>
+                                                    <!-- START: Sub-Navigation Link ================================================================ -->
+                                                    <div class="uef-container-row uef-container-separator" data-uef-nav-sub_nav-state="available">
+                                                        <div class="uef-container-content">
+                                                            <a href="#" title="Eating Healthy, Available" target="_self" class="uef-navLink">Eating Healthy</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Sub-Navigation Link ================================================================ -->
+                                                    <!-- START: Sub-Navigation Group ================================================================ -->
+                                                    <div class="uef-container-row uef-container-separator" data-uef-nav-sub_nav-state="available">
+                                                        <div class="uef-container-content">
+                                                            <div class="uef-toggle-container" data-uef-show-hide-border="false">
+                                                                <a href="#" title="Fruits, Available, Show" class="uef-toggle-controller uef-toggle-show" data-uef-toggle-targetid="fruits-content-name"
+                                                                    data-uef-toggle-defaultcontroller="true" id="fruits-group-name-1">Fruits
+                                                                    <!-- INSERT BADGES (OPTIONAL) -->
+                                                                </a>
+                                                                <a href="#" title="Fruits, Available, Hide" class="uef-toggle-controller uef-toggle-hide hide" data-uef-toggle-targetid="fruits-content-name"
+                                                                    data-uef-toggle-defaultcontroller="false" id="fruits-group-toggle-id-2">Fruits
+                                                                    <!-- INSERT BADGES (OPTIONAL) -->
+                                                                </a>
+                                                                <div class="uef-toggleContainer hide" id="fruits-content-name" data-uefid="uef-li-shwHd" data-uef-toggle-controller-showid="fruits-group-name"
+                                                                    data-uef-toggle-controller-hideid="fruits-group-toggle-id-2">
+                                                                    <ul>
+                                                                        <li data-uef-nav-sub_nav-state="available">
+                                                                            <a href="#" title="Apple, Available" target="_self"
+                                                                                class="uef-navLink">Apple</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Sub-Navigation Group ================================================================ -->
+                                                    <!-- START: Sub-Navigation Group (Collapsed) ================================================================ -->
+                                                    <div class="uef-container-row uef-container-separator" data-uef-nav-sub_nav-state="available">
+                                                        <div class="uef-container-content">
+                                                            <div class="uef-toggle-container" data-uef-show-hide-border="false">
+                                                                <a href="#" title="Vegetables, Available, Show" class="uef-toggle-controller uef-toggle-show" data-uef-toggle-targetid="group-name-content-name"
+                                                                    data-uef-toggle-defaultcontroller="true" id="group-name-group-name-1">Vegetables
+                                                                    <!-- INSERT BADGES (OPTIONAL) -->
+                                                                </a>
+                                                                <a href="#" title="Vegetables, Available, Hide" class="uef-toggle-controller uef-toggle-hide hide" data-uef-toggle-targetid="group-name-content-name"
+                                                                    id="group-name-group-toggle-id-2">Vegetables
+                                                                    <!-- INSERT BADGES (OPTIONAL) -->
+                                                                </a>
+                                                                <div class="uef-toggleContainer hide" id="group-name-content-name" data-uefid="uef-li-shwHd" data-uef-toggle-controller-showid="group-name-group-name"
+                                                                    data-uef-toggle-controller-hideid="group-name-group-toggle-id-2">
+                                                                    <ul>
+                                                                        <li data-uef-nav-sub_nav-state="available">
+                                                                            <a href="#" title="Link, Available" target="_self"
+                                                                                class="uef-navLink">Link</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Sub-Navigation Group (Collapsed) ================================================================ -->
+                                                    <!-- INSERT SUB-NAV GROUP OR LINK (uef-subnav-add-group, uef-subnav-add-link) -->
+                                                </div>
+                                                <!-- END: Sub-Navigation ================================================================ -->
+
+
+                                                <!-- START: TableBasic ================================================================ -->
+                                                <div class="uef-table" data-uef-table-rowsperpage="5" data-uef-table-reorderablecolumns="true" data-uef-table-filter="true"
+                                                    data-uef-table-column_selector="true" id="true">
+                                                    <div id="true_tableEl_wrapper" class="dataTables_wrapper true">
+                                                        <table cellpadding="0" cellspacing="0" border="0" summary="INSERT TABLE SUMMARY" class="uef-event-show sortable dataTable true dtr-inline"
+                                                            id="true_tableEl" role="">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th class="uef-table_responsive-control-header sorting_disabled uef-table-responsive-hide" tabindex="0" rowspan="1" colspan="1"
+                                                                        style="width: 0px;" data-column-index="0" aria-label="">
+                                                                        <div class="uef-table-thWrapper"></div>
+                                                                    </th>
+                                                                    <th scope="col" class="uef-sort-default sorting_asc" data-datatype="text" tabindex="0" aria-controls="uefTable_0_tableEl"
+                                                                        rowspan="1" colspan="1" style="width: 192px;" data-column-index="1"
+                                                                        aria-sort="ascending" aria-label=" [Text] : activate to sort column descending">
+                                                                        <div class="uef-table-thWrapper">INSERT COL NAME</div>
+                                                                    </th>
+                                                                    <!-- Add Another Column (Header): uef-table-add-col-header -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                    <td class="sorting_1">INSERT CONTENT</td>
+                                                                    <!-- Add Another Column (Data): uef-table-add-col-data -->
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- END: TableBasic ================================================================ -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <!--
+                                   <uef-template>
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <h3>UEF 2.1 Support</h3>
+                                                    <div class="uef-container-instructions">Genesys supports prototyping wih the new UEF 2.1 Web Components.</div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                        <p><uef-button type="submit" label="PRIMARY" name="uef-button-1" value="PRIMARY" primary></uef-button></p>
+                                                        <uef-textbox id="error-test" error="false" required="true" field-name="uef-textbox-1" label-text="[Textbox Pattern Label]" instructions-text="[Instruction Text]" support-text="[Support Text]">
+                                                            <input slot="textbox" type="text" />
+                                                        </uef-textbox>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </uef-template>
+                                    -->
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>UEF Super Speed Shortcuts</h3>
+                                                <div class="uef-container-instructions">
+                                                    Genesys provides support for rapidly describing and building your prototypes with
+                                                    <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet</a> and UEF Super Speed Shortcuts.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <p>You can quickly add things like:</p>
+                                                <ul>
+                                                    <li>5 UEF Container Rows by typing
+                                                        <strong>uef-cr*5</strong>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <!--
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>UEF 2.1 Web Components</h3>
+                                                <div class="uef-container-instructions">These componentes are currently the BETA stage.</div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <uef-textbox input-id="wc-input-1-test" instructions-text="Some instructions text" label-text="My Web Component Input" support-text="Some support text"></uef-textbox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                -->
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <div class="uef-print-region">
+
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3>Responsive Tables</h3>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <!-- START: TableMultiRowAction ================================================================ -->
+                                                    <div class="uef-table" data-uef-table-reorderablecolumns="true" id="uefTable_7">
+                                                        <div id="uefTable_7_tableEl_wrapper" class="dataTables_wrapper">
+                                                            <table cellpadding="0" cellspacing="0" border="0" summary="Table showing retirement scenarios with action controls at the bottom of the table that will only affect the selected rows"
+                                                                class="uef-event-show sortable dataTable dtr-inline uef-table-responsive"
+                                                                id="uefTable_7_tableEl" role="" style="width: 986px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="uef-table_responsive-control-header sorting_disabled uef-table-responsive-hide" tabindex="0" rowspan="1" colspan="1"
+                                                                            style="width: 0px;" data-column-index="0" aria-label="">
+                                                                            <div class="uef-table-thWrapper"></div>
+                                                                        </th>
+                                                                        <th scope="col" data-uef-table-unsortable="true" data-uef-table-column-responsive_priority="true" class="sorting_disabled"
+                                                                            rowspan="1" colspan="1" style="width: 5px;" data-column-index="1"
+                                                                            aria-label=" Select all rows ">
+                                                                            <div class="uef-table-thWrapper">
+                                                                                <div class="uef-checkbox uef-input" data-uefid="uef-in-chkBx">
+                                                                                    <div class="uef-pattern-label"></div>
+                                                                                    <div class="uef-pattern-content">
+                                                                                        <input type="checkbox" name="patTableHead" id="pattablehead_18" value="on" aria-labelledby="pattablehead_18Label" class="uef-table-selectAll">
+                                                                                        <label for="pattablehead_18" id="pattablehead_18Label">Select all rows</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th scope="col" class="uef-sort-default sorting_asc" data-datatype="text" tabindex="0" aria-controls="uefTable_7_tableEl"
+                                                                            rowspan="1" colspan="1" data-column-index="2" aria-sort="ascending"
+                                                                            aria-label="Text : activate to sort column descending">
+                                                                            <div class="uef-table-thWrapper">INSERT COL NAME</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                        <td>
+                                                                            <div class="uef-checkbox uef-input" data-uefid="uef-in-chkBx">
+                                                                                <div class="uef-pattern-label"></div>
+                                                                                <div class="uef-pattern-content">
+                                                                                    <input type="checkbox" name="patTableRow1" id="pattablerow1_19" value="on" aria-labelledby="pattablerow1_19Label">
+                                                                                    <label for="pattablerow1_19" id="pattablerow1_19Label">Select row 1</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="sorting_1">INSERT CONTENT</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 2" aria-expanded="false"></td>
+                                                                        <td>
+                                                                            <div class="uef-checkbox uef-input" data-uefid="uef-in-chkBx">
+                                                                                <div class="uef-pattern-label"></div>
+                                                                                <div class="uef-pattern-content">
+                                                                                    <input type="checkbox" name="patTableRow3" id="pattablerow3_35" value="on" aria-labelledby="pattablerow3_35Label">
+                                                                                    <label for="pattablerow3_35" id="pattablerow3_35Label">Select row 17</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="sorting_1">INSERT CONTENT</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="2" rowspan="1">
+                                                                            <input type="submit" value="Action 1" name="btnAction1" class="uef-btn uef-btn-secondary">
+                                                                            <input type="submit" value="Action 2" name="btnAction2" class="uef-btn uef-btn-secondary">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: TableMultiRowAction ================================================================ -->
+
+                                                    <!-- START: TableBasic ================================================================ -->
+                                                    <div class="uef-table" data-uef-table-reorderablecolumns="true" id="uefTable_0">
+                                                        <div id="uefTable_0_tableEl_wrapper" class="dataTables_wrapper no-footer">
+                                                            <table cellpadding="0" cellspacing="0" border="0" summary="Table illustrating different retirement scenarios" class="uef-event-show sortable dataTable no-footer dtr-inline"
+                                                                id="uefTable_0_tableEl" role="" style="width: 984px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="uef-table_responsive-control-header sorting_disabled uef-table-responsive-hide" tabindex="0" rowspan="1" colspan="1"
+                                                                            style="width: 0px;" data-column-index="0" aria-label="">
+                                                                            <div class="uef-table-thWrapper"></div>
+                                                                        </th>
+                                                                        <th scope="col" class="uef-sort-default sorting_asc" data-datatype="text" tabindex="0" aria-controls="uefTable_0_tableEl"
+                                                                            rowspan="1" colspan="1" style="width: 192px;" data-column-index="1"
+                                                                            aria-sort="ascending" aria-label=" [Text] : activate to sort column descending">
+                                                                            <div class="uef-table-thWrapper">Text</div>
+                                                                        </th>
+                                                                        <th scope="col" data-datatype="numeric" class="sorting" tabindex="0" aria-controls="uefTable_0_tableEl" rowspan="1" colspan="1"
+                                                                            style="width: 192px;" data-column-index="2" aria-label=" [Numeric] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Numeric</div>
+                                                                        </th>
+                                                                        <th scope="col" data-uef-table-column-width="200px" data-datatype="date" class="sorting" tabindex="0" aria-controls="uefTable_0_tableEl"
+                                                                            rowspan="1" colspan="1" style="width: 200px;" data-column-index="3"
+                                                                            aria-label=" [Date] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Date</div>
+                                                                        </th>
+                                                                        <th scope="col" data-datatype="num-fmt" class="uef-text-right sorting" tabindex="0" aria-controls="uefTable_0_tableEl" rowspan="1"
+                                                                            colspan="1" style="width: 201px;" data-column-index="4"
+                                                                            aria-label=" [Currency] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Currency</div>
+                                                                        </th>
+                                                                        <th scope="col" data-uef-table-unsortable="true" class="sorting_disabled" rowspan="1" colspan="1" style="width: 199px;" data-column-index="5"
+                                                                            aria-label="Unsortable">
+                                                                            <div class="uef-table-thWrapper">Unsortable</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">analyse</td>
+                                                                        <td>8805</td>
+                                                                        <td>February 28, 1937</td>
+                                                                        <td class="uef-text-right uef-text-right">$2,640.00</td>
+                                                                        <td>8805</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 2" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">connection</td>
+                                                                        <td>5283</td>
+                                                                        <td>January 19, 1910</td>
+                                                                        <td class="uef-text-right uef-text-right">$210.00</td>
+                                                                        <td>5283</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 3" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">lamentable</td>
+                                                                        <td>47716</td>
+                                                                        <td>January 8, 1960</td>
+                                                                        <td class="uef-text-right uef-text-right">$2,110.00</td>
+                                                                        <td>47716</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 4" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">load</td>
+                                                                        <td>2270</td>
+                                                                        <td>September 12, 1982</td>
+                                                                        <td class="uef-text-right uef-text-right">$3,210.00</td>
+                                                                        <td>2270</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 5" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">magnificent</td>
+                                                                        <td>3330</td>
+                                                                        <td>January 20, 1995</td>
+                                                                        <td class="uef-text-right uef-text-right">$6,030.00</td>
+                                                                        <td>3330</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: TableBasic ================================================================ -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3 data-step="3" data-intro="Genesys supports persisting user input between pages in your prototype, even after a refresh. You tell Genesys when you want the data erased.">Data Persistence</h3>
+                                                    <div class="uef-container-instructions">You can easily pass user entered data from page to page.</div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <!-- START: Textbox ================================================================ -->
+                                                    <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="dp-test" id="dp-test-PatternLabel">What's Your Name?</label>
+                                                            <div id="dp-test-Instructions" class="uef-instructionText"></div>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input property="dp-test" mv-init="" size="30" maxlength="30" name="dp-test" aria-labelledby="dp-test-PatternLabel dp-test-Instructions dp-test-BottomLabel"
+                                                                id="dp-test" type="text" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textbox ================================================================ -->
+                                                    <!-- START: Primary/Secondary Button ================================================================ -->
+                                                    <p>
+                                                        <input type="submit" class="uef-btn uef-btn-secondary" value="Reload Page"
+                                                            name="btnReload" id="btnReload" onclick="javascript:location.reload();"
+                                                        />
+                                                    </p>
+                                                    <!-- END: Primary/Secondary Button ================================================================ -->
+                                                    <!--<p>Your name is: <strong>[username-test]</strong></p>-->
+                                                    <p>
+                                                        Once you have entered a name, reload the page and watch the name persist. Use the
+                                                        <strong>Clear</strong> button on the Genesys toolbar to clear all values.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3 data-step="4" data-intro="<p>Genesys supports Conditional Flow logic within prototypes, using plain English words in markup. No scripting required.</p>">Conditional Logic</h3>
+                                                    <div class="uef-container-instructions">You can use conditional logic to show/hide items and alter the user flow
+                                                        through an application.</div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <!-- START: RadioList ================================================================ -->
+                                                    <fieldset class="uef-input-compound">
+                                                        <div class="uef-radioList uef-input" data-uefid="uef-in-rdoLst">
+                                                            <fieldset>
+                                                                <div class="uef-pattern-label">
+                                                                    <div class="legend">
+                                                                        <span id="uef-radioList1PatternLabel">Do you live in the United States?</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uef-pattern-content">
+                                                                    <ol class="uef-inputList">
+                                                                        <li>
+                                                                            <input property="residency" type="radio" name="ex_RadioList_1" id="ex_radiolist_1_15" value="yes" aria-labelledby="uef-radioList1PatternLabel uef-radioList1Instructions ex_radiolist_1_15Label"
+                                                                                data-uef-form-display-controller="uef-forms-dynamic-el-reg-2">
+                                                                            <label for="ex_radiolist_1_15" id="ex_radiolist_1_15Label">Yes</label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="radio" name="ex_RadioList_1" id="ex_radiolist_1_16" value="no" aria-labelledby="ex_radiolist_1_16Label" data-uef-form-display-controller="uef-forms-dynamic-el-reg-3">
+                                                                            <label for="ex_radiolist_1_16" id="ex_radiolist_1_16Label">No</label>
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                    </fieldset>
+                                                    <!-- END: RadioList ================================================================ -->
+
+                                                    <div mv-if="residency = no">
+                                                        <!-- START: Warning-Compact ================================================================ -->
+                                                        <div class="uef-warning uef-notice-compact uef-notice">
+                                                            <div class="uef-notice-row hd">
+                                                                <div class="uef-notice-content">
+                                                                    <h4 tabindex="0">Sorry, this application only supports U.S. citizens.</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- END: Warning-Compact ================================================================ -->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3>User Roles & States</h3>
+                                                    <div class="uef-container-instructions">
+                                                        Show how different user roles and states would affect the interface.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <p>
+                                                        Genesys supports dynamic display of different user interfaces (from within the same prototype page), based on the user role
+                                                        and/or state selected (e.g., admin, approver, logged in, etc.).
+                                                    </p>
+                                                    <p>To try this, select one of the user role ("Page States") links in the
+                                                        top right of the page and watch the text below. (You may have to
+                                                        hide the Genesys Toolbar.)</p>
+                                                    <strong>
+                                                        <p class="role_not_Logged_in">Welcome. Please Log In.</p>
+                                                        <p class="role_Logged_in">Thanks for logging in.</p>
+                                                        <p class="role_Logged_in_and_Admin">Hello, Admin user.</p>
+                                                        <p class="role_Power_User">You are a Power User.</p>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3 data-step="5" data-intro="<p>Genesys allow you to create and easily view multi-lingual prototypes, all within a single design.</p><p>No need to create separate pages for each language.</p>">Multi-Lingual Support</h3>
+                                                    <div class="uef-container-instructions">Easily add multiple languages within the same prototype.</div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <!-- START: SSN ================================================================ -->
+                                                    <div class="uef-ssn uef-format-ssn uef-input" data-uefid="uef-in-ssn">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="ml-test" id="ml-test-PatternLabel" data-lang="Social Security Number (SSN)" data-lang-es="El numero de seguridad social (SSN)"
+                                                                data-lang-ru="Номер социального страхования"></label>
+                                                            <div id="ml-test-Instructions" class="uef-instructionText" data-lang="Please enter your 9-digit number below." data-lang-es="Por favor ponga su numero de nueve digitos abajo"
+                                                                data-lang-ru="Пожалуйста введите свой 9-значный номер ниже"></div>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input name="ml-test" aria-labelledby="ml-test-PatternLabel ml-test-Instructions ml-test-BottomLabel" id="ml-test" type="text"
+                                                                autocomplete="off" size="11" maxlength="11">
+                                                            <div class="uef-supportText" id="ml-test-BottomLabel" data-lang="You don't need to add dashes." data-lang-es="No necesita incluir los guiones"
+                                                                data-lang-ru="Разделительное тире вводить не обязательно"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: SSN ================================================================ -->
+                                                    <!-- START: Primary/Secondary Button ================================================================ -->
+                                                    <button class="uef-btn uef-btn-secondary" name="btnLang" id="btnLang" onclick="GENESYS.Toolbar.language();">Toggle Language</button>
+                                                    <!-- END: Primary/Secondary Button ================================================================ -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3 data-step="6" data-intro="Genesys includes A/B testing. Try reloading the page several times and notice the different UI components that appear below.">A/B Testing</h3>
+                                                    <div class="uef-container-instructions">
+                                                        Easily add simple A/B testing on page content, components, or entire page designs. Try reloading this page&mdash; you'll
+                                                        notice different UI components appear below.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <div class="ab-test-1">
+                                                        <!-- START: Date ================================================================ -->
+                                                        <div class="uef-date uef-input" data-uefid="uef-in-drpLst">
+                                                            <fieldset>
+                                                                <div class="uef-pattern-label">
+                                                                    <div class="legend">
+                                                                        <span id="test-ab-date-PatternLabel">Date</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="uef-pattern-content">
+                                                                    <!-- MONTH -->
+                                                                    <div class="uef-multipartItem">
+                                                                        <label for="test-ab-date-month" id="test-ab-date-month-TopLabel">Month</label>
+                                                                        <select size="1" name="test-ab-date-month" aria-labelledby="test-ab-date-PatternLabel test-ab-dateInstructions test-ab-date-month-TopLabel"
+                                                                            id="test-ab-date-month">
+                                                                            <option value="">--</option>
+                                                                            <option value="01">01 - January</option>
+                                                                            <option value="02">02 - February</option>
+                                                                            <option value="03">03 - March</option>
+                                                                            <option value="04">04 - April</option>
+                                                                            <option value="05">05 - May</option>
+                                                                            <option value="06">06 - June</option>
+                                                                            <option value="07">07 - July</option>
+                                                                            <option value="08">08 - August</option>
+                                                                            <option value="09">09 - September</option>
+                                                                            <option value="10">10 - October</option>
+                                                                            <option value="11">11 - November</option>
+                                                                            <option value="12">12 - December</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <!-- DAY (DROP LIST) -->
+                                                                    <div class="uef-multipartItem">
+                                                                        <label for="test-ab-date-day" id="test-ab-date-day-TopLabel">Day</label>
+                                                                        <select size="1" name="test-ab-date-Day" aria-labelledby="test-ab-date-day-TopLabel" id="test-ab-date-day">
+                                                                            <option value="">--</option>
+                                                                            <option value="01">1</option>
+                                                                            <option value="02">2</option>
+                                                                            <option value="03">3</option>
+                                                                            <option value="04">4</option>
+                                                                            <option value="05">5</option>
+                                                                            <option value="06">6</option>
+                                                                            <option value="07">7</option>
+                                                                            <option value="08">8</option>
+                                                                            <option value="09">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+                                                                            <option value="24">24</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="26">26</option>
+                                                                            <option value="27">27</option>
+                                                                            <option value="28">28</option>
+                                                                            <option value="29">29</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="31">31</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <!-- YEAR (DROP LIST) -->
+                                                                    <div class="uef-multipartItem">
+                                                                        <label for="test-ab-date-year" id="test-ab-date-year-TopLabel">Year</label>
+                                                                        <select size="1" name="test-ab-date-Year" aria-labelledby="test-ab-date-year-TopLabel" id="test-ab-date-year">
+                                                                            <option value="">--</option>
+                                                                            <option value="2017">2017</option>
+                                                                            <option value="2016">2016</option>
+                                                                            <option value="2015">2015</option>
+                                                                            <option value="2014">2014</option>
+                                                                            <option value="2013">2013</option>
+                                                                            <option value="2012">2012</option>
+                                                                            <option value="2011">2011</option>
+                                                                            <option value="2010">2010</option>
+                                                                            <option value="2009">2009</option>
+                                                                            <option value="2008">2008</option>
+                                                                            <option value="2007">2007</option>
+                                                                            <option value="2006">2006</option>
+                                                                            <option value="2005">2005</option>
+                                                                            <option value="2004">2004</option>
+                                                                            <option value="2003">2003</option>
+                                                                            <option value="2002">2002</option>
+                                                                            <option value="2001">2001</option>
+                                                                            <option value="2000">2000</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
+                                                        <!-- END: Date================================================================ -->
+
+                                                    </div>
+                                                    <div class="ab-test-2">
+                                                        <!-- START: DateCalendar ================================================================ -->
+                                                        <div class="uef-input uef-date-enhanced" data-uefid="uef-in-dtPkr">
+                                                            <div class="uef-pattern-label">
+                                                                <label for="test-ab-date-cal" id="test-ab-date-cal-pattern-label">Date Calendar</label>
+                                                            </div>
+                                                            <div class="uef-pattern-content">
+                                                                <input id="test-ab-date-cal" name="test-ab-date-cal" type="text" class="uef-datePicker" aria-labelledby="test-ab-date-cal-pattern-label"
+                                                                    aria-required="true" autocomplete="off" />
+                                                            </div>
+                                                        </div>
+                                                        <!-- END: DateCalendar ================================================================ -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3 data-step="7" data-intro="You can embed annotations and even partial or complete walkthroughs of prototypes, like the one you are doing right now.">Annotations & Walkthroughs</h3>
+                                                    <div class="uef-container-instructions">
+                                                        Provide annotations and walkthroughs of your prototypes.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row" data-uefid="uef-co-bsc">
+                                                <div class="uef-container-content">
+                                                    <!-- START: Primary/Secondary Button ================================================================ -->
+                                                    <input onclick="javascript:introJs().start();" type="submit" class="uef-btn uef-btn-secondary" value="Start the Walkthrough"
+                                                        name="btnWalkthru" id="btnWalkthru">
+                                                    <!-- END: Primary/Secondary Button ================================================================ -->
+                                                    <!-- START: Primary/Secondary Button ================================================================ -->
+                                                    <input data-hint="After selecting this button, you'll see an indicator for an annotation on the 'Blurred Text Box' label below."
+                                                        onclick="javascript:introJs().showHints();" type="submit" class="uef-btn uef-btn-secondary"
+                                                        value="Show Annotations" name="btnWalkthru" id="btnWalkthru">
+                                                    <!-- END: Primary/Secondary Button ================================================================ -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+                                        <!-- START: ContainerBasic ================================================================ -->
+                                        <div class="uef-container module" data-uefid="uef-co-bsc">
+                                            <div class="uef-container-row hd uef-container-separator">
+                                                <div class="uef-container-content">
+                                                    <h3>Redacted Input</h3>
+                                                    <div class="uef-container-instructions">
+                                                        Genesys supports blurring, redacting, or clearing user input with invisible ink. Especially useful when your prototypes use
+                                                        fake data. In all cases the text is still there, but won't show up
+                                                        onscreen, when printed or when generating screenshots. Select the
+                                                        field and then press CTRL+A to see the underlying data.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uef-container-row">
+                                                <div class="uef-container-content">
+                                                    <!-- START: Textbox ================================================================ -->
+                                                    <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="blur-test" id="blur-test-PatternLabel" data-hint="If you hightlight the blurred text (or any of the redacted input options), you can still see the underlying data.">Blurred Text Box:</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input value="This is some sample text" class="gns-blur" size="30" maxlength="30" name="blur-test" aria-labelledby="blur-test-PatternLabel blur-test-Instructions blur-test-BottomLabel"
+                                                                id="blur-test" type="text" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textbox ================================================================ -->
+                                                    <!-- START: Textbox ================================================================ -->
+                                                    <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="redact-test" id="redact-test-PatternLabel">Redacted Text Box:</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input value="This is some sample text" class="gns-redact" size="30" maxlength="30" name="redact-test" aria-labelledby="redact-test-PatternLabel redact-test-Instructions redact-test-BottomLabel"
+                                                                id="redact-test" type="text" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textbox ================================================================ -->
+                                                    <!-- START: Textbox ================================================================ -->
+                                                    <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="invisible-test" id="invisible-test-PatternLabel">Invisible Ink (Cleared) Text Box:</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input value="This is some sample text" class="gns-invisible-ink" size="30" maxlength="30" name="invisible-test" aria-labelledby="invisible-test-PatternLabel invisible-test-Instructions invisible-test-BottomLabel"
+                                                                id="invisible-test" type="text" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textbox ================================================================ -->
+                                                    <!-- START: Textarea ================================================================ -->
+                                                    <div class="uef-textArea uef-input" data-uefid="uef-in-txtAra" data-uef-maxlength="500">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="redacted-textbox" id="redacted-textbox-PatternLabel">TextBox Sample:</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <textarea class="gns-blur" name="redacted-textbox" aria-labelledby="redacted-textbox-PatternLabel redacted-textbox-Instructions"
+                                                                id="redacted-textbox" cols="70" rows="5">
+                                                                This is some sample textbox input. It can go on and on and on and...
+                                                            </textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textarea ================================================================ -->
+                                                    <!-- START: DropList ================================================================ -->
+                                                    <div class="uef-dropList uef-input" data-uefid="uef-in-drpLst">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="ex_droplist_1" id="uef-dropList5PatternLabel">Drop List Sample:</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <select class="gns-blur" size="1" name="insert-id" aria-labelledby="insert-id-PatternLabel" id="insert-id">
+                                                                <option value="">--</option>
+                                                                <option value="1">Option 1</option>
+                                                                <option value="2" selected>Option 2</option>
+                                                                <option value="3">Option 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: DropList ================================================================ -->
+                                                    <p>
+                                                        <strong>Table Example:</strong>
+                                                    </p>
+                                                    <!-- START: TableBasic ================================================================ -->
+                                                    <div class="uef-table" data-uef-table-reorderablecolumns="true" id="uefTable_0">
+                                                        <div id="uefTable_0_tableEl_wrapper" class="dataTables_wrapper no-footer">
+                                                            <table cellpadding="0" cellspacing="0" border="0" summary="Table illustrating different retirement scenarios" class="gns-blur uef-event-show sortable dataTable no-footer dtr-inline"
+                                                                id="uefTable_0_tableEl" role="" style="width: 984px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="uef-table_responsive-control-header sorting_disabled uef-table-responsive-hide" tabindex="0" rowspan="1" colspan="1"
+                                                                            style="width: 0px;" data-column-index="0" aria-label="">
+                                                                            <div class="uef-table-thWrapper"></div>
+                                                                        </th>
+                                                                        <th scope="col" class="uef-sort-default sorting_asc" data-datatype="text" tabindex="0" aria-controls="uefTable_0_tableEl"
+                                                                            rowspan="1" colspan="1" style="width: 192px;" data-column-index="1"
+                                                                            aria-sort="ascending" aria-label=" [Text] : activate to sort column descending">
+                                                                            <div class="uef-table-thWrapper">Text</div>
+                                                                        </th>
+                                                                        <th scope="col" data-datatype="numeric" class="sorting" tabindex="0" aria-controls="uefTable_0_tableEl" rowspan="1" colspan="1"
+                                                                            style="width: 192px;" data-column-index="2" aria-label=" [Numeric] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Numeric</div>
+                                                                        </th>
+                                                                        <th scope="col" data-uef-table-column-width="200px" data-datatype="date" class="sorting" tabindex="0" aria-controls="uefTable_0_tableEl"
+                                                                            rowspan="1" colspan="1" style="width: 200px;" data-column-index="3"
+                                                                            aria-label=" [Date] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Date</div>
+                                                                        </th>
+                                                                        <th scope="col" data-datatype="num-fmt" class="uef-text-right sorting" tabindex="0" aria-controls="uefTable_0_tableEl" rowspan="1"
+                                                                            colspan="1" style="width: 201px;" data-column-index="4"
+                                                                            aria-label=" [Currency] : activate to sort column ascending">
+                                                                            <div class="uef-table-thWrapper">Currency</div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 1" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">analyse</td>
+                                                                        <td>8805</td>
+                                                                        <td>February 28, 1937</td>
+                                                                        <td class="uef-text-right uef-text-right">$2,640.00</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 2" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">connection</td>
+                                                                        <td>5283</td>
+                                                                        <td>January 19, 1910</td>
+                                                                        <td class="uef-text-right uef-text-right">$210.00</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 3" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">lamentable</td>
+                                                                        <td>47716</td>
+                                                                        <td>January 8, 1960</td>
+                                                                        <td class="uef-text-right uef-text-right">$2,110.00</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="even">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 4" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">load</td>
+                                                                        <td>2270</td>
+                                                                        <td>September 12, 1982</td>
+                                                                        <td class="uef-text-right uef-text-right">$3,210.00</td>
+                                                                    </tr>
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="uef-table_responsive-control" tabindex="0" aria-label="Row 5" aria-expanded="false"></td>
+                                                                        <td class="sorting_1">magnificent</td>
+                                                                        <td>3330</td>
+                                                                        <td>January 20, 1995</td>
+                                                                        <td class="uef-text-right uef-text-right">$6,030.00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: TableBasic ================================================================ -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END: ContainerBasic ================================================================ -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uef-grids-column-1-2 uef-grids-column">
+                                <div class="uef-grids-content">
+                                    <!-- START: ContainerBasic-with-Subtitles ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3 data-step="8" data-intro="Genesys includes design stubs for common UI elements and interactions so you can get something prototyped quickly."
+                                                    data-lang="Genesys Design Stubs & Utilities" data-lang-es="Genesys Trozos de Diseño"
+                                                    data-lang-ru="Контейнеры для дизайна Genesys"></h3>
+                                                <div class="uef-container-instructions" data-lang="Quick components to rapidly flesh out initial content and designs." data-lang-es="Componentes rápidos para pulir rápidamente el contenido y los diseños iniciales."
+                                                    data-lang-ru="Быстрые компоненты для быстрого создания исходного контента и дизайна."></div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <h4 data-lang="Headers, Links & Buttons" data-lang-es="Encabezados, Enlaces y Botones" data-lang-ru="Заголовки, ссылки и кнопки"></h4>
+                                                <!-- START: Genesys Header ======= -->
+                                                <h3 data-lang="Header Level 3" data-lang-es="Nivel de Encabezado 3" data-lang-ru="Уровень заголовка 3"></h3>
+                                                <!-- END:   Genesys Header ======= -->
+                                                <p>
+                                                    <!-- START: Genesys Link === -->
+                                                    <a href="#">
+                                                        <span data-lang="Link" data-lang-es="Enlazar" data-lang-ru="Ссылка"></span>
+                                                    </a>
+                                                    <!-- END:   Genesys Link === -->
+                                                </p>
+                                                <!-- START: Genesys Header ======================================= -->
+                                                <button onclick="location.href='#';">
+                                                    <span data-lang="Do Something" data-lang-es="Hacer algo" data-lang-ru="Сделай что-нибудь"></span>
+                                                </button>
+                                                <!-- END :  Genesys Header ======================================= -->
+                                                <h4 data-lang="Blocks" data-lang-es="Bloques" data-lang-ru="Блоки"></h4>
+                                                <!-- START: Genesys Block Placeholder ================================================================= -->
+                                                <div style="width: 100%;height: auto;padding:2px 4px;background-color:silver;color:black;font-size:2em">
+                                                    <span data-lang="Your Content Here" data-lang-es="Tu Contenido Aquí" data-lang-ru="
+                                                Ваш контент здесь"></span>
+                                                </div>
+                                                <!-- END: Genesys Block Placeholder ================================================================= -->
+                                                <h4 data-step="9" data-intro="Genesys provides thousands of icons from popular icons libraries (Font Awesome, Material Icons, etc.) right out of the box so you'll have ready access to every icon you'll ever need."
+                                                    data-lang="Icons" data-lang-es="Iconos" data-lang-ru="Иконки"></h4>
+                                                <i class="fa fa-map-pin"></i>
+                                                <h4 data-lang="Images" data-lang-es="Imágenes" data-lang-ru="Изображений" data-lang-ru="Изображений"></h4>
+                                                <img src="http://satyr.io/?width=300&height=200&text=Placeholder&texture=cross" />
+                                                <h4>Quick Positioning & Alignment</h4>
+                                                <p class="gns-text-left">Align Left</p>
+                                                <p class="gns-text-center">Align Center</p>
+                                                <p class="gns-text-right">Align Right</p>
+                                                <button>Left</button>
+                                                <button class="gns-float-right">Right</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic-with-Subtitles ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Master Page Components</h3>
+                                                <div class="uef-container-instructions">
+                                                    Genesys allows you to define UI components once and reuse them on multiple pages as Master Page Components.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <div gns-include-html="includes/include-subnav.html"></div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row ft">
+                                            <div class="uef-container-content">
+                                                <p>Note: This functionality does require you to publish your files to a web
+                                                    server.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Low-Fidelity Prototyping</h3>
+                                                <div class="uef-container-instructions">
+                                                    Use the built-in Paper CSS low-fidelity prototyping system to quickly create design mockups.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <a href="#" onclick="GENESYS.Toolbar.fidelity();">Change to Paper</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Site Maps</h3>
+                                                <div class="uef-container-instructions">
+                                                    Quickly create
+                                                    <a href="includes/sitemap-template.html" target="_blank">Site Maps</a> for your prototypes. You can use these to quickly navigate
+                                                    to any page in your prototypes.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <iframe src="includes/sitemap-template.html" style="width:100%;border: none;overflow:scroll;" height="500">
+
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3 data-step="11" data-intro="Genesys allows designers to embed flowcharts or diagrams directly on the web page or display them as an overlay to the page, communicating user or process flows.">Charting & Diagramming</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <!-- START: Mermaid Chart -->
+                                                <div class="mermaid" mv-expressions="none">
+                                                    graph LR A[Square Rect] -- Link text --> B((Circle)) A --> C(Round Rect) B --> D{Rhombus} C --> D
+                                                </div>
+                                                <!-- END: Mermaid Chart -->
+                                                <!-- START: Mermaid Chart -->
+                                                <div class="mermaid">
+                                                    sequenceDiagram Alice->>+John: Hello John, how are you? Alice->>+John: John, can you hear me? John-->>-Alice: Hi Alice, I
+                                                    can hear you! John-->>-Alice: I feel great!
+                                                </div>
+                                                <!-- END: Mermaid Chart -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3 data-step="12" data-intro="<p>Genesys allows you to easily animate anything on the screen, using any one (or combination) of preset animation effects. Use wisely.</p><p><strong>That's the end of our tour. We've only scratched the surface of what Genesys can do. Explore this page and the Genesys Toolbar further for more features.</strong></p>">Animation Support</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <!-- START: Primary/Secondary Button ================================================================ -->
+                                                <input data-anijs="if: mouseover, do: pulse animated" type="submit" class="uef-btn uef-btn-secondary" value="Hover over me"
+                                                    name="btnHoverExample" id="btnHoverExample">
+                                                <!-- END: Primary/Secondary Button ================================================================ -->
+                                                <!-- START: Primary/Secondary Button ================================================================ -->
+                                                <input data-anijs="if: click, do: zoomOutRight animated" type="submit" class="uef-btn uef-btn-secondary" value="Done" name="btnExitExample"
+                                                    id="btnExitExample">
+                                                <!-- END: Primary/Secondary Button ================================================================ -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Presentations & Slideshows</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <p>
+                                                    Genesys contains built-in support for creating web-based presentations and slideshows, using the following libraries:
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="https://revealjs.com/#/" target="_blank">Reveal</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://webslides.tv/#slide=1" target="_blank">WebSlides</a>
+                                                    </li>
+                                                </ul>
+                                                <p>These presentations can be separate from the prototype or embedded directly
+                                                    within the prototype.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Measure Perceived Usability</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <p>Genesys includes support for adding three types of self-reported quantitative
+                                                    data to your prototypes:</p>
+                                                <ul>
+                                                    <li>Single Ease Question (SEQ)</li>
+                                                    <li>System Usability Scale (SUS)</li>
+                                                    <li>Task Load Index (TLX)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- START: Container-Row ================================================================ -->
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <img src="screenshots/sus.png" />
+                                            </div>
+                                        </div>
+                                        <!-- END: Container-Row ================================================================ -->
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>UX Analytics</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <p>
+                                                    Genesys contains built-in support for collecting UX-specific analytics, through the
+                                                    <a href="https://analytics.google.com" target="_blank">Google Analytics</a> service and the
+                                                    <a href="https://github.com/googleanalytics/autotrack" target="_blank">AutoTrack</a> plugin, including capturing and analysis of the following
+                                                    insights:
+                                                </p>
+                                                <ul>
+                                                    <li>User behavior (Behavior and Event Flows, such as filling out fields,
+                                                        clicking things, etc.)</li>
+                                                    <li>Determination of which features your users are grinding on</li>
+                                                    <li>Location of points in test scenarios where failures occur (Goal Flow)</li>
+                                                    <li>Levels of engagement</li>
+                                                    <li>Assessment of design changes or alternative (A/B) designs</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Grid-50-50 ================================================================ -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START: Add Genesys Design Kit =========================== -->
+    <link href="../components/genesys/genesys.css" rel="stylesheet" />
+    <script src="../components/genesys/genesys.js"></script>
+    <!-- END:   Add Genesys Design Kit =========================== -->
+
+    <!-- START: Animate.css & AniJS Libraries ============================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
+    <!-- END:   Animate.css & AniJS Libraries ============================== -->
+
+    <!-- START: Simple A/B Testing Configuration -->
+    <script>
+        $(document).ready(function () {
+            $.simpleAB({
+                classCount: 2, // The number of SimpleAB "pages" you're using.
+                persist: false, // Whether or not to persist the stored page in a cookie.
+                className: "ab-test" // The name of the class that names SimpleAB pages.
+            });
+        });
+    </script>
+    <!-- END: Simple A/B Testing Configuration -->
+
+</body>
+
+</html>
