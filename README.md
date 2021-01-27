@@ -1,0 +1,2 @@
+# genesys
+Genesys is a prototyping toolkit for use with VSCode. It enables designers and UI developers to quickly create low to high-fidelity prototypes, or even production-ready UI. Genesys provides support for most major design systems (Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add any others. Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more--all through markup.
