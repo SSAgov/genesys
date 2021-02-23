@@ -10,8 +10,8 @@ Requirements
 ------------
 
 - Microsoft Visual Studio Code
-- `Genesys Extension` for Visual Studio Code
-- `Design in the Browser Extension` for Visual Studio Code
+- `Genesys Extension` for Visual Studio Code (https://github.com/SSAgov/genesys-vscode-extension)
+- `Design in the Browser Extension` for Visual Studio Code (https://github.com/craigcecil/vscode-design-in-browser-pack)
 - Any modern browser
 
 Operating System & Browser Support
@@ -106,11 +106,11 @@ Genesys provides built-in support for the following design systems and framework
 - [Tachyons](http://tachyons.io/)
 - [Tailwind](https://tailwindcss.com/)
 - [Turret](http://turretcss.com/)
-- User Experience Framework (UEF)
+- [User Experience Framework](https://github.com/SSAgov/uef-vscode-extension)
 - [UI Kit](https://getuikit.com/docs/introduction)
 - [U.S. Web Design Standards](https://standards.usa.gov/)
 
-Additionally, Genesys contains built-in support for WebSlides and Reveal.js for creating web-based presentations.
+Additionally, Genesys contains built-in support for [WebSlides](https://webslides.tv/#slide=1) and [Reveal.js](https://revealjs.com/) for creating web-based presentations.
 
 Tutorials
 ---------
