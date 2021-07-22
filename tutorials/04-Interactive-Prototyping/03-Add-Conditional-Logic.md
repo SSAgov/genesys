@@ -1,8 +1,7 @@
 Add Conditional Logic
 =====================
 
-This tutorial will show you how to add conditional logic (useful for branching and toggling content) to your prototypes.
-
+This tutorial will show you how to add conditional logic (useful for branching and toggling cont
 Think of Conditional Logic as having an "if-then" relationship: **if** the conditions are met, **then** do something.
 
 Let's start with a simple example. Let's ask the user if they live in the United States, and if they answer 'No', then display an informational notice.
@@ -39,6 +38,25 @@ Finally, wrap the message paragraph to use the `property` value:
 
 Notice we just wrapped the message in a generic `DIV` element and attached the Genesys Conditional Logic attribute (`mv-if`) to it. That's it.
 
+For more information on the underlying Mavo open-source library from MIT we are using here, see http://mavo.io/docs/expressions#conditionals-if-and-the-mv-if-attribute.
+
 ------
 
-For more information on the underlying Mavo open-source library from MIT we are using here, see http://mavo.io/docs/expressions#conditionals-if-and-the-mv-if-attribute.
+Adding Interactions with Natural Language
+-----------------------------------------
+
+Genesys supports specifying simple interactions using natural language statements, via the open-source UILang library (http://uilang.com/).
+
+You will find the UILang library in the `components\interaction` directory.
+
+To get started, include the `uilang.js` file in the HEAD of your page and add a `<code>` block on the page that contains your interaction instructions, such as:
+
+```
+clicking on "#confirm" adds class "show" on "#success"
+```
+
+Again, the UILang page at http://uilang.com/ has many more examples of the natural language syntax.
+
+
+
+
