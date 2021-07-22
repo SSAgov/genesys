@@ -21,10 +21,6 @@
     <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.fn.setup.js"></script>
     <script src="https://www.socialsecurity.gov/flexweb/rel_5_0/libs/headjs/head.min.js" data-headjs-load="https://www.socialsecurity.gov/flexweb/rel_5_0/js/ssa.flexweb.loader.js"></script>
 
-    <!-- UEF 2.1 -->
-    <!--<link rel="stylesheet" href="../components/uef-2.1/uef.css"/>-->
-    <!--<script src="../components/uef-2.1/uef-web-components.js"></script>-->
-
     <!-- Mermaid Charting & Diagramming Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0-alpha.4/mermaid.min.js"></script>
     <script>
@@ -39,6 +35,9 @@
     <link rel="stylesheet" href="../components/mavo/mavo.css" />
     <script src="../components/mavo/mavo.es5.min.js"></script>
     <!-- END:   Mavo Library ============================== -->
+
+    <!-- Add UILang Library for easy interaction -->
+    <script src="../components/interaction/uilang.js"></script>
 
     <!-- START: A/B Testing Library ============================ -->
     <script src="../components/ab-testing/simpleab.min.js"></script>
@@ -1480,6 +1479,68 @@
                                                 <input data-anijs="if: click, do: zoomOutRight animated" type="submit" class="uef-btn uef-btn-secondary" value="Done" name="btnExitExample"
                                                     id="btnExitExample">
                                                 <!-- END: Primary/Secondary Button ================================================================ -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END: ContainerBasic ================================================================ -->
+
+                                    <!-- START: ContainerBasic ================================================================ -->
+                                    <div class="uef-container module" data-uefid="uef-co-bsc">
+                                        <div class="uef-container-row hd uef-container-separator">
+                                            <div class="uef-container-content">
+                                                <h3>Interactions with Natural Language</h3>
+                                            </div>
+                                        </div>
+                                        <div class="uef-container-row">
+                                            <div class="uef-container-content">
+                                                <p>
+                                                    Genesys contains built-in support for specifying interactions using natural language.
+                                                    No JavaScript required.
+                                                </p>
+                                                <p>
+                                                    Want to attend our design meetup?
+                                                    <input type="submit" class="uef-btn uef-btn-secondary" value="RSVP" name="rsvp" id="rsvp">
+                                                </p>
+                                                <div id="rsvp-form" class="hide">
+                                                    <!-- START: Textbox ================================================================ -->
+                                                    <div class="uef-textBox uef-input" data-uefid="uef-in-txtBx">
+                                                        <div class="uef-pattern-label">
+                                                            <label for="rsvp-name" id="rsvp-name-PatternLabel">Email</label>
+                                                        </div>
+                                                        <div class="uef-pattern-content">
+                                                            <input size="30" maxlength="30" name="rsvp-name"
+                                                            aria-labelledby="rsvp-name-PatternLabel"
+                                                            id="rsvp-name" property="rsvp-name" type="text" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Textbox ================================================================ -->
+                                                    <p><input type="submit" class="uef-btn uef-btn-secondary" value="Confirm" name="confirm" id="confirm"></p>
+                                                </div>
+                                                <div id="rsvp-confirm" class="hide">
+                                                    <!-- START: Success-Compact ================================================================ -->
+                                                    <div class="uef-success uef-notice-compact uef-notice">
+                                                        <div class="uef-notice-row hd">
+                                                            <div class="uef-notice-content">
+                                                                <h4 tabindex="0"><strong>Thanks! You are now added to the next meeting.</strong></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END: Success-Compact ================================================================ -->
+                                                </div>
+                                                <code>
+                                                    clicking on "#rsvp" removes class "hide" on "#rsvp-form"
+                                                    clicking on "#confirm" adds class "hide" on "#rsvp-form"
+                                                    clicking on "#confirm" removes class "hide" on "#rsvp-confirm"
+                                                    clicking on "#confirm" adds class "hide" on "#rsvp"
+                                                </code>
+
+                                                <p>The interaction above was specified with:</p>
+                                                <pre style="font-size: 12px;">
+clicking on "#rsvp" removes class "hide" on "#rsvp-form"
+clicking on "#confirm" adds class "hide" on "#rsvp-form"
+clicking on "#confirm" removes class "hide" on "#rsvp-confirm"
+clicking on "#confirm" adds class "hide" on "#rsvp"
+                                                </pre>
                                             </div>
                                         </div>
                                     </div>
