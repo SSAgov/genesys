@@ -47,18 +47,56 @@ Benefits
 Features
 --------
 
-- Construction of responsive, HTML-based prototypes
-- Create flowcharts, diagrams, wireframes, mockups, and low and high-fidelity prototypes
-- Support of all major prototyping frameworks and libraries
-- IntelliSense code-based prototyping
-- Dynamic Content
-- Conditional Flow
-- Data Driven
-- Drag & drop page and form design via Draw.io integration
-- Slideshows, Presentations, and prototype Walkthroughs
-- Annotations
-- Animations
-- Version Control and Team Collaboration
+**Built-in Design Systems**<br />
+Including Material Design, Bootstrap, Microsoft Fluent, U.S Web Design Standards, Salesforce Lightning, and more. Add your own as well.
+
+**Accessibility Checking**<br />
+Integrated accessibilty checking of your prototypes through ANDI and Lighthouse.
+
+**Real-Time Collaboration**<br />
+Integrated Kanban board, whiteboard and application sharing through LiveShare.
+
+**Single Source of Truth**<br />
+No more approximations of designs. Prototypes are 100% accurate and responsive, since they are built in the browser.
+
+**Version Control**<br />
+Explore and version designs with the integrated industry-standard Git version control system. View a visual history of design changes.
+
+**Annotations & Walkthroughs**<br />
+Easily add and view designer comments or fully automated design walkthroughs right in your prototypes.
+
+**Roles, States and Conditional Logic**<br />
+Multiple user roles, use cases, and conditional logic within a single prototype.
+
+**Multi-Lingual**<br />
+Switch between multiple language designs within the same prototype.
+
+**Quick Mockups**<br />
+Integrated drag & drop mockups with the embedded Draw.io application and prototyping stencils. (SVG Mode)
+
+**Master Page Components**<br />
+Define UI components once and reuse them on multiple pages as Master Page Components.
+
+**Variables & Data Persistence**<br />
+Easily pass user entered data from page to page.
+
+**Charting & Diagramming**<br />
+Create sustainable charts, diagrams, and user flows with integrated Mermaid support.
+
+**Animation**<br />
+Add animation to any element with predefined keywords.
+
+**A/B Testing**<br />
+Easily add simple A/B testing on page content, components, or entire page designs, right within a single prototype.
+
+**UX Analytics**<br />
+Built-in support for collecting UX-specific analytics via Google Analytics and the AutoTrack plugin
+
+**Realistic Data**<br />
+Rapidly create realistic, fake data specific in your designs with the integrated Faker extension.
+
+**UX Measurements**<br />
+Integrated support for industry standard SEQ, SUS, and TLX feedback.
 
 The Genesys Toolbar
 -------------------
