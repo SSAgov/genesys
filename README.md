@@ -6,15 +6,9 @@ Genesys provides a simple way to make rich, interactive prototypes using a decla
 Requirements
 ------------
 
-- Microsoft Visual Studio Code
-- `Genesys Extension` for Visual Studio Code (https://github.com/SSAgov/genesys-vscode-extension)
-- `Design in the Browser Extension` for Visual Studio Code (https://github.com/craigcecil/vscode-design-in-browser-pack)
-- Any modern browser
-
-OS & Browser Support
---------------------
-
-- Windows, Mac, and Linux
+- [Microsoft Visual Studio Code](https://code.visualstudio.com/)
+- [Genesys Extension](https://github.com/SSAgov/genesys-vscode-extension) for Visual Studio Code
+- [Design in the Browser Extension](https://github.com/craigcecil/vscode-design-in-browser-pack) for Visual Studio Code
 - Any modern browser
 
 Demo
