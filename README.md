@@ -11,8 +11,8 @@ Requirements
 - `Design in the Browser Extension` for Visual Studio Code (https://github.com/craigcecil/vscode-design-in-browser-pack)
 - Any modern browser
 
-Operating System & Browser Support
-----------------------------------
+OS & Browser Support
+--------------------
 
 - Windows, Mac, and Linux
 - Any modern browser
@@ -50,8 +50,8 @@ Benefits
 - Code used in prototypes can serve as a basis for production ready code.
 - Ultimately, it allows us to put content over form, embrace the fluidity of the web and the diaspora of devices, and focus on systems of design components instead of pages.
 
-Genesys Features
-----------------
+Features
+--------
 
 - Construction of responsive, HTML-based prototypes
 - Create flowcharts, diagrams, wireframes, mockups, and low and high-fidelity prototypes
@@ -83,8 +83,8 @@ The integrated Genesys toolbar contains the following functionality:
 - Automated Accessibility Checker
 - Responsive Web Design Tester
 
-Integrated Design System Support
----------------------------------------------
+Design Systems Support
+----------------------
 
 Genesys provides built-in support for the following design systems and frameworks for building prototypes:
 
