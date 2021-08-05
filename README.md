@@ -17,10 +17,10 @@ Requirements
 - [Design in the Browser Extension](https://github.com/craigcecil/vscode-design-in-browser-pack) for Visual Studio Code
 - Any modern browser
 
-Demo
-----
+Live Demo
+---------
 
-You can view a demo of a web page designed with Genesys, including Genesys features and the Genesys Toolbar (see below) in the `/demo` directory.
+[Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
 
 Getting Started
 ---------------
