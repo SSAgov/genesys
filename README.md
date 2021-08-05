@@ -20,7 +20,7 @@ Requirements
 Live Demo
 ---------
 
-[Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
+- [Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
 
 Getting Started
 ---------------
