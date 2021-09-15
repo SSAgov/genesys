@@ -1,4 +1,4 @@
-<h1 align="center">Genesys</h1>
+<h1 align="center">&#9885; Genesys</h1>
 <h2 align="center">Design in the Browser Prototyping</h2>
 
 ![Genesys screenshot](genesys-screenshot.png)
