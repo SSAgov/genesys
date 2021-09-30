@@ -154,3 +154,30 @@ Genesys provides tutorials to lead you through all supported functionality, incl
 
 You can find these tutorials in the <code>tutorials</code> folder.
 
+Contributing
+------------
+
+Feel free to contribute to this project by suggesting a new feature or modification, or to discuss issues.
+
+* Open an [issue](https://github.com/SSAgov/genesys/issues) for any features, modifications, or issues you want to bring up.
+* Have a look at the [contributing guidelines](https://github.com/SSAgov/genesys/blob/main/CONTRIBUTING.md) before submitting a pull request (PR).
+
+Maintainer
+----------
+
+* [Craig Cecil](https://github.com/CraigCecilSSA)
+
+Acknowlegements
+---------------
+
+Thanks to the following people and projects for producing the great open-source software that powers much of Genesys:
+
+* [Lea Verou](https://github.com/LeaVerou) ([Mavo.js](https://github.com/mavoweb/mavo))
+* [Afshin Mehrabani](https://github.com/afshinm) ([Intro.js](https://github.com/usablica/intro.js))
+* [Andi Kent](https://github.com/andykent) ([PolyPage.js](https://github.com/andykent/polypage))
+* [John Cotter](https://github.com/JohnCotterSSA) ([ANDI](https://github.com/SSAgov/ANDI))
+
+License
+-------
+
+This project uses the [Apache 2.0](https://github.com/SSAgov/genesys/blob/main/LICENSE.md) license.
