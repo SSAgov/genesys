@@ -3,11 +3,13 @@
 
 ![Genesys screenshot](genesys-screenshot.png)
 
-Genesys provides a simple way to make rich, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create low to high-fidelity prototypes, or even production-ready UI. 
+Genesys provides a simple way to make rich, accessible, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create low to high-fidelity prototypes, or even production-ready UI. 
 
 Genesys provides support for most major design systems (Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add any others. 
 
 Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more--all through markup.
+
+*Note that Genesys allows you to create and test fully accessible and Section 508-compliant prototypes.*
 
 Requirements
 ------------
