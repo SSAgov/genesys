@@ -9,7 +9,7 @@ Genesys provides support for most major design systems (Bootstrap, Material Desi
 
 Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more--all through markup.
 
-*Note that Genesys allows you to create and test fully accessible and Section 508-compliant prototypes.*
+*Note that Genesys allows you to create and test fully accessible, Section 508-compliant prototypes.*
 
 Requirements
 ------------
