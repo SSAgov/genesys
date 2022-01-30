@@ -3,11 +3,11 @@
 
 ![Genesys screenshot](genesys-screenshot.png)
 
-Genesys provides a simple way to make rich, accessible, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create low to high-fidelity prototypes, or even production-ready UI. 
+Genesys provides a simple way to make rich, accessible, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create a low to high-fidelity prototypes, or even production-ready User Interface. 
 
-Genesys provides support for most major design systems (Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add any others. 
+Genesys provides support for most major design systems like Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add many others. 
 
-Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more--all through markup.
+Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more, all through markup.
 
 *Note that Genesys allows you to create and test fully accessible, Section 508-compliant prototypes.*
 
@@ -27,7 +27,7 @@ Live Demo
 Getting Started
 ---------------
 
-1. Download the latest Genesys archive package from this repo.
+1. Download the latest Genesys archive package from this repository.
 2. Start Visual Studio Code and select **File** > **Open Folder...** and then select `Genesys` from the location you saved it to.
 3. In VSCode, select the Extensions panel, search for and install the `Genesys` extension and the `Design in the Browser` extension from the Microsoft Extensions Marketplace.
 4. Optional: Download and install [Git](https://git-scm.com/) in order to enable version control.
@@ -40,17 +40,17 @@ Designing in the Browser is a methodology that directly uses the browser as the 
 Benefits
 --------
 
-- Requires minimal skills to get started--just HTML
+- Requires minimal skills to get started (Just HTML)
 - Creates accessible prototypes
-- Once learned, much faster than any drag-and-drop tool
-- Create dynamic designs that flex and change depending on the width of the screen
+- Once learned,then it provides Experience of much faster than any drag-and-drop tool.
+- Create dynamic designs that flex & change depending on the width of the screen
 - Create designs that interact and behave exactly as deployed
 - View desktop and mobile versions of a design at the same time
-- Make design decisions based on actual browser behavior, rather than just assumptions in our designs. Think of it as deciding in the browser.
+- It Makes design decisions based on the actual browser behavior, rather than just assumptions in our designs. Think of it as deciding in the browser.
 - Allows us to test early and get feedback on reality—not assumptions from abstracted tool output. As soon as a single piece of design is in the browser, it can be tested.
 - Sets expectations early and allows the design to grow iteratively and organically.
-- Code used in prototypes can serve as a basis for production ready code.
-- Ultimately, it allows us to put content over form, embrace the fluidity of the web and the diaspora of devices, and focus on systems of design components instead of pages.
+- The Code used in prototypes can serve as a basis for a production ready code.
+- Ultimately, it allows us to put content over form, embrace the fluidity of the web and the relocation of devices, and It focuses Specially on System about design components instead of pages.
 
 Features
 --------
@@ -65,7 +65,7 @@ Integrated accessibilty checking of your prototypes through ANDI and Lighthouse.
 Integrated Kanban board, whiteboard and application sharing through LiveShare.
 
 **Single Source of Truth**<br />
-No more approximations of designs. Prototypes are 100% accurate and responsive, since they are built in the browser.
+No more approximations of designs. Prototypes are 100% accurate and responsive, since they are all built in the browser.
 
 **Version Control**<br />
 Explore and version designs with the integrated industry-standard Git version control system. View a visual history of design changes.
@@ -86,7 +86,7 @@ Integrated drag & drop mockups with the embedded Draw.io application and prototy
 Define UI components once and reuse them on multiple pages as Master Page Components.
 
 **Variables & Data Persistence**<br />
-Easily pass user entered data from page to page.
+Easily passes user entered data from page to page.
 
 **Charting & Diagramming**<br />
 Create sustainable charts, diagrams, and user flows with integrated Mermaid support.
