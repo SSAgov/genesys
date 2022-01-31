@@ -3,9 +3,9 @@
 
 ![Genesys screenshot](genesys-screenshot.png)
 
-Genesys provides a simple way to make rich, accessible, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create a low to high-fidelity prototypes, or even production-ready User Interface. 
+Genesys provides a simple way to make rich, accessible, interactive prototypes using a declarative language (HTML). It enables designers and UI developers to quickly create a low to high-fidelity prototypes, or even production-ready user interfaces. 
 
-Genesys provides support for most major design systems like Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add many others. 
+Genesys provides support for most major design systems like Bootstrap, Material Design, Foundation, Ionic, Tailwind, Tachyons, et. al.) and you can add any others. 
 
 Additional features include multi-lingual support, automated walk-throughs, on-screen comments, A/B testing, conditional logic, animation, and more, all through markup.
 
@@ -42,15 +42,15 @@ Benefits
 
 - Requires minimal skills to get started (Just HTML)
 - Creates accessible prototypes
-- Once learned,then it provides Experience of much faster than any drag-and-drop tool.
-- Create dynamic designs that flex & change depending on the width of the screen
+- Once learned,it provides Experience a much faster prototyping experience than visual drag-and-drop tool.
+- Create dynamic designs that flex and change depending on the width of the screen
 - Create designs that interact and behave exactly as deployed
 - View desktop and mobile versions of a design at the same time
 - It Makes design decisions based on the actual browser behavior, rather than just assumptions in our designs. Think of it as deciding in the browser.
 - Allows us to test early and get feedback on reality—not assumptions from abstracted tool output. As soon as a single piece of design is in the browser, it can be tested.
 - Sets expectations early and allows the design to grow iteratively and organically.
-- The Code used in prototypes can serve as a basis for a production ready code.
-- Ultimately, it allows us to put content over form, embrace the fluidity of the web and the relocation of devices, and It focuses Specially on System about design components instead of pages.
+- Code used in prototypes can serve as a basis for production ready code.
+- Ultimately, it allows us to put content over form, embrace the fluidity of the web and the diaspora of devices, and It focuses Specially on System about design components instead of pages.
 
 Features
 --------
@@ -65,7 +65,7 @@ Integrated accessibilty checking of your prototypes through ANDI and Lighthouse.
 Integrated Kanban board, whiteboard and application sharing through LiveShare.
 
 **Single Source of Truth**<br />
-No more approximations of designs. Prototypes are 100% accurate and responsive, since they are all built in the browser.
+No more approximations of designs. Prototypes are 100% accurate and responsive, since they are built in the browser.
 
 **Version Control**<br />
 Explore and version designs with the integrated industry-standard Git version control system. View a visual history of design changes.
@@ -86,7 +86,7 @@ Integrated drag & drop mockups with the embedded Draw.io application and prototy
 Define UI components once and reuse them on multiple pages as Master Page Components.
 
 **Variables & Data Persistence**<br />
-Easily passes user entered data from page to page.
+Easily pass user entered data from page to page.
 
 **Charting & Diagramming**<br />
 Create sustainable charts, diagrams, and user flows with integrated Mermaid support.
