@@ -42,7 +42,7 @@ Benefits
 
 - Requires minimal skills to get started (Just HTML)
 - Creates accessible prototypes
-- Once learned,it provides Experience a much faster prototyping experience than visual drag-and-drop tool.
+- Once learned, it provides a much faster prototyping experience than visual drag-and-drop tools.
 - Create dynamic designs that flex and change depending on the width of the screen
 - Create designs that interact and behave exactly as deployed
 - View desktop and mobile versions of a design at the same time
@@ -50,7 +50,7 @@ Benefits
 - Allows us to test early and get feedback on reality—not assumptions from abstracted tool output. As soon as a single piece of design is in the browser, it can be tested.
 - Sets expectations early and allows the design to grow iteratively and organically.
 - Code used in prototypes can serve as a basis for production ready code.
-- Ultimately, it allows us to put content over form, embrace the fluidity of the web and the diaspora of devices, and It focuses Specially on System about design components instead of pages.
+- Ultimately, it allows us to place content over form and embrace the fluidity of the web and the diaspora of devices.
 
 Features
 --------
