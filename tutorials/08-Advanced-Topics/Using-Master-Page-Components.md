@@ -17,7 +17,7 @@ For example, if you have a Navigational component that you want to insert on mul
 To include this Navigational component on one of your pages, follow this syntax:
 
 `````
-<html-include src="navigation.html"></htmml-include>
+<html-include src="navigation.html"></html-include>
 `````
 The contents of the navigation.html file will be inserted in place of the DIV element.
 
