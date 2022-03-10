@@ -2991,7 +2991,7 @@ if (typeof GENESYS == "undefined" || !GENESYS) {var GENESYS = {};}
                 scriptElem.setAttribute('src', scriptURL);
                 document.body.appendChild(scriptElem);
             }
-            loadScript('http://westciv.com/xray/thexray.js');
+            loadScript('https://westciv.com/xray/thexray.js');
         },
 
         resize: function() {
