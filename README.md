@@ -19,8 +19,8 @@ Requirements
 - [Design in the Browser Extension](https://github.com/craigcecil/vscode-design-in-browser-pack) for Visual Studio Code
 - Any modern browser
 
-Live Demo
----------
+Demo
+----
 
 - [Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
 
