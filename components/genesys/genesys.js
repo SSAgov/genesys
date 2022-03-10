@@ -504,7 +504,7 @@ if (typeof GENESYS == "undefined" || !GENESYS) {var GENESYS = {};}
             var footer = document.createElement('div');
             footer.className = "gns-footer";
             var footerText = document.createElement('p');
-            footerText.innerText = "Genesys Prototype";
+            footerText.innerHTML = "Powered by <a href='https://ssagov.github.io/genesys/'>Genesys</a>";
             footer.appendChild(footerText);
             body.appendChild(footer);
 
