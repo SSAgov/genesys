@@ -27,8 +27,8 @@ Demo
 Getting Started
 ---------------
 
-1. Download the latest Genesys archive package from this repository. Select that big green button labelled **Code** above, then select **Download ZIP**.
-2. Start Visual Studio Code and select **File** > **Open Folder...** and then select `Genesys` from the location you saved it to.
+1. Download the latest Genesys archive package from this repository. Select that big green button labelled **Code** above, then select **Download ZIP**. Finally, extract the Zip file contents wherever you want.
+2. Start Visual Studio Code and select **File** > **Open Folder...** and then select `Genesys` from the location you extracted it to.
 3. In VSCode, select the Extensions panel, search for and install the `Genesys` extension and the `Design in the Browser` extension from the Microsoft Extensions Marketplace.
 4. Optional: Download and install [Git](https://git-scm.com/) in order to enable version control.
 
