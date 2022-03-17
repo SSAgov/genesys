@@ -56,8 +56,8 @@ body.gns-footer-hide .gns-footer {
 /* this allows us to see certain elements (images, DIVs) correctly */
 .introjs-fixParent {position: absolute !important;}
 
-/* CSS-DRIVEN INTERNATIONALIZATION
-   -------------------------------
+/*  CSS-DRIVEN INTERNATIONALIZATION
+    -------------------------------
 */
 
 /* English (default language)*/
@@ -69,16 +69,16 @@ body.gns-footer-hide .gns-footer {
 /* Russian */
 [data-lang-ru]:lang(ru)::before {content: attr(data-lang-ru);}
 
-/* GRID
-   ------------------------------------------
+/*  GRID
+    ------------------------------------------
 */
 body.gns-grid .uef-grids-row,
 body.gns-grid .uef-grids-column {
     outline: 1px dashed red !important;
 }
 
-/* LOW-FIDELITY (LoFi)
-   ------------------------------------------
+/*  LOW-FIDELITY (LoFi)
+    ------------------------------------------
 */
 
 body.gns-lofi * {
@@ -100,8 +100,8 @@ body.gns-lofi ol
     border:solid 2px #41403E;
 }
 
-/* GENESYS TOOLBAR (CUSTOMIZATION OF MAVO TOOLBAR)
-   -----------------------------------------------
+/*  GENESYS TOOLBAR (CUSTOMIZATION OF MAVO TOOLBAR)
+    -----------------------------------------------
 */
 
 .mv-bar {
@@ -214,8 +214,8 @@ body.gns-test button#gns-test {
 }
 
 
-/* BLUR, REDACT,  or CLEAR (INVISIBLE INK) USER INPUT and/or FAKE/REALISTIC DATA
-   -----------------------------------------------------------------------------
+/*  BLUR, REDACT,  or CLEAR (INVISIBLE INK) USER INPUT and/or FAKE/REALISTIC DATA
+    -----------------------------------------------------------------------------
 */
 
 /* BLUR */
@@ -266,8 +266,8 @@ span.gns-invisible-ink {
     }
 }
 
-/* USER FEEDBACK (SEQ & SUS)
-   ============================================================================================================================
+/*  USER FEEDBACK (SEQ & SUS)
+    ============================================================================================================================
 */
 
 .gns-user-feedback {
@@ -332,8 +332,8 @@ span.gns-invisible-ink {
     margin-top: 0.5em;
 }
 
-/* GENESYS UTILITY CLASSES
-   ===============================================================================================
+/*  GENESYS UTILITY CLASSES
+    ===============================================================================================
 */
 
 .gns-text-left {text-align: left;}
@@ -405,7 +405,7 @@ body.gns-inspect>div#uef-tmpl-content-wrapper:after {
     position: absolute;
     top: 120px;
     right: 20px;
-    content: "UEF 2.0 detected";
+    content: "UEF (Java Edition)";
     font-size: 1em;
     font-weight: bold;
     background: purple;
@@ -423,7 +423,7 @@ body.gns-inspect>uef-app:after {
     position: absolute;
     top: 120px;
     right: 20px;
-    content: "UEF 2.1 detected";
+    content: "UEF (Web Components Edition)";
     font-size: 1em;
     font-weight: bold;
     background: purple;
@@ -436,8 +436,9 @@ body.gns-inspect>uef-app:after {
     -webkit-box-shadow: 0 .188em .625em #494949;
 }
 
-  /* Second, let's outline all UEF patterns */
-  body.gns-inspect [data-uefID^="uef-"], body.gns-inspect div.uef-videoLink,
+  /* Outline UEF (Java Edition) patterns */
+  body.gns-inspect [data-uefID^="uef-"],
+  body.gns-inspect div.uef-videoLink,
   body.gns-inspect .uef-btn,
   body.gns-inspect .uef-textBox,
   body.gns-inspect .uef-checkList,
@@ -496,40 +497,47 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect a[rel="define"]
   {outline: 1px solid purple !important;}
 
-  /* Outline UEF Web Components */
+  /* Outline UEF (Web Components Edition) */
   body.gns-inspect uef-button>button,
   body.gns-inspect uef-container>div,
   body.gns-inspect uef-summary>div,
-  body.gns-inspect uef-tabs>div,
-  body.gns-inspect uef-address>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-amount>uef-input-wrapper>div,
-  body.gns-inspect uef-bank-info>uef-compound>uef-input-wrapper>div,
+  body.gns-inspect .uef-container-tabs_list,
+  body.gns-inspect uef-address>.uef-input-group,
+  body.gns-inspect uef-amount>.uef-input-group,
+  body.gns-inspect uef-bank-info>.uef-input-group,
   body.gns-inspect uef-checkbox>uef-input-wrapper>div,
   body.gns-inspect uef-checklist>uef-input-wrapper>div,
-  body.gns-inspect uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-country>uef-droplist>uef-input-wrapper>div,
-  body.gns-inspect uef-date>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-droplist>uef-input-wrapper>div,
+  body.gns-inspect uef-compound>.uef-input-group,
+  body.gns-inspect uef-country>.uef-input-group,
+  body.gns-inspect uef-credit-card>.uef-input-group,
+  body.gns-inspect uef-date>.uef-input-group,
+  body.gns-inspect uef-droplist>.uef-input-group,
   body.gns-inspect uef-dropmenu>button,
-  body.gns-inspect uef-ein>uef-textbox>uef-input-wrapper>div,
-  body.gns-inspect uef-email>uef-textbox>uef-input-wrapper>div,
-  body.gns-inspect uef-file-upload>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-gender>uef-radiolist>uef-input-wrapper>div,
-  body.gns-inspect uef-name>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-password>uef-input-wrapper>div,
-  body.gns-inspect uef-phone>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-place>uef-compound>uef-input-wrapper>div,
-  body.gns-inspect uef-radiolist>uef-input-wrapper>div,
-  body.gns-inspect uef-ssn>uef-textbox>uef-input-wrapper>div,
-  body.gns-inspect uef-state>uef-droplist>uef-input-wrapper>div,
-  body.gns-inspect uef-textbox>uef-input-wrapper>div,
-  body.gns-inspect uef-textarea>uef-input-wrapper>div,
-  body.gns-inspect uef-time>div, uef-timezone>div,
+  body.gns-inspect uef-ein>.uef-input-group,
+  body.gns-inspect uef-email>.uef-input-group,
+  body.gns-inspect uef-file-upload>.uef-input-group,
+  body.gns-inspect uef-gender>uef-radiolist>.uef-input-group,
+  body.gns-inspect uef-name>.uef-input-group,
+  body.gns-inspect uef-password>.uef-input-group,
+  body.gns-inspect uef-phone>.uef-input-group,
+  body.gns-inspect uef-place>.uef-input-group,
+  body.gns-inspect uef-radiolist>.uef-input-group,
+  body.gns-inspect uef-ssn>.uef-input-group,
+  body.gns-inspect uef-state>.uef-input-group,
+  body.gns-inspect uef-textbox>.uef-input-group,
+  body.gns-inspect uef-textarea>.uef-input-group,
+  body.gns-inspect uef-time>.uef-input-group,
+  body.gns-inspect uef-timezone>.uef-input-group,
   body.gns-inspect uef-username>div,
-  body.gns-inspect uef-zip>uef-textbox>uef-input-wrapper>div,
+  body.gns-inspect uef-zip>.uef-input-group,
   body.gns-inspect uef-required-info>p,
   body.gns-inspect uef-optional-info>p,
   body.gns-inspect uef-link>a,
+  body.gns-inspect uef-videolink>a,
+  body.gns-inspect uef-error-summary>.uef-notice,
+  body.gns-inspect uef-notice>.uef-notice,
+  body.gns-inspect .uef-flag,
+  body.gns-inspect uef-progress>.uef-input-group,
   body.gns-inspect uef-repeater>div,
   body.gns-inspect uef-show-hide>div,
   body.gns-inspect uef-tooltip>a,
@@ -539,8 +547,10 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect uef-badge,
   body.gns-inspect uef-optional-info,
   body.gns-inspect uef-required-info,
-  body.gns-inspect uef-input-error>div,
-  body.gns-inspect uef-table>div
+  body.gns-inspect .uef-input-group_error-list,
+  body.gns-inspect uef-error-summary>div>uef-notice>div,
+  body.gns-inspect uef-table>div,
+  uef-input-readonly>.uef-input-group
   {outline: 1px solid purple !important;}
 
   /* but don't outline UEF Page patterns */
@@ -558,7 +568,7 @@ body.gns-inspect>uef-app:after {
   /* or embedded patterns within Notices */
   body.gns-inspect div.uef-notice div.uef-checkbox {outline: none;}
 
-  /* Third, set up how we want the UEF Pattern Names to display */
+  /* Set up how we want the UEF Pattern Names to display */
   body.gns-inspect .uef-btn:after,
   body.gns-inspect .uef-table:after,
   body.gns-inspect #uef-steps:after,
@@ -614,64 +624,74 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect #uef-breadcrumbs:before,
   body.gns-inspect .uef-print-page:before,
   body.gns-inspect .uef-badge:after,
+  body.gns-inspect .uef-readOnly:before,
   body.gns-inspect [data-uefID*="uef"]:before,
   body.gns-inspect [data-uefID*="uef-ta"]:after,
   body.gns-inspect [data-uefID="uef-na-stps"]:after,
   body.gns-inspect [data-uefID="uef-na-appTabs"]:after,
   body.gns-inspect [data-uefID="uef-btn"]:after,
 
-  /* UEF 2.1 Elements */
+  /* UEF (Web Components Edition) */
   body.gns-inspect uef-button>button:after,
   body.gns-inspect uef-container>div:after,
-  body.gns-inspect uef-summary>div:after, uef-tabs>div:after,
-  body.gns-inspect uef-address>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-amount>uef-input-wrapper>div:before,
-  body.gns-inspect uef-bank-info>uef-compound>uef-input-wrapper>div:before,
+  body.gns-inspect uef-summary>div:after,
+  body.gns-inspect .uef-container-tabs_list:before,
+  body.gns-inspect uef-address>.uef-input-group:before,
+  body.gns-inspect uef-amount>.uef-input-group:before,
+  body.gns-inspect uef-bank-info>.uef-input-group:before,
   body.gns-inspect uef-checkbox>uef-input-wrapper>div:before,
   body.gns-inspect uef-checklist>uef-input-wrapper>div:before,
-  body.gns-inspect uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-country>uef-droplist>uef-input-wrapper>div:after,
-  body.gns-inspect uef-date>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-droplist>uef-input-wrapper>div:before,
+  body.gns-inspect uef-compound>.uef-input-group:before,
+  body.gns-inspect uef-country>.uef-input-group:before,
+  body.gns-inspect uef-credit-card>.uef-input-group:before,
+  body.gns-inspect uef-date>.uef-input-group:before,
+  body.gns-inspect uef-droplist>.uef-input-group:before,
   body.gns-inspect uef-dropmenu>button:after,
-  body.gns-inspect uef-ein>uef-textbox>uef-input-wrapper>div:before,
-  body.gns-inspect uef-email>uef-textbox>uef-input-wrapper>div:after,
-  body.gns-inspect uef-file-upload>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-gender>uef-radiolist>uef-input-wrapper>div:before,
-  body.gns-inspect uef-input-error>div:after,
-  body.gns-inspect uef-name>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-password>uef-input-wrapper>div:before,
-  body.gns-inspect uef-phone>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-place>uef-compound>uef-input-wrapper>div:before,
-  body.gns-inspect uef-radiolist>uef-input-wrapper>div:before,
-  body.gns-inspect uef-ssn>uef-textbox>uef-input-wrapper>div:after,
-  body.gns-inspect uef-state>uef-droplist>uef-input-wrapper>div:before,
-  body.gns-inspect uef-textbox>uef-input-wrapper>div:before,
-  body.gns-inspect uef-textarea>uef-input-wrapper>div:before,
-  body.gns-inspect uef-time>div:after,
-  body.gns-inspect uef-timezone>div:after,
+  body.gns-inspect uef-ein>.uef-input-group:before,
+  body.gns-inspect uef-email>.uef-input-group:before,
+  body.gns-inspect uef-file-upload>.uef-input-group:before,
+  body.gns-inspect uef-gender>uef-radiolist>.uef-input-group:before,
+  body.gns-inspect .uef-input-group_error-list:after,
+  body.gns-inspect uef-name>.uef-input-group:before,
+  body.gns-inspect uef-password>.uef-input-group:before,
+  body.gns-inspect uef-phone>.uef-input-group:before,
+  body.gns-inspect uef-place>.uef-input-group:before,
+  body.gns-inspect uef-radiolist>.uef-input-group:before,
+  body.gns-inspect uef-ssn>.uef-input-group:before,
+  body.gns-inspect uef-state>.uef-input-group:before,
+  body.gns-inspect uef-textbox>.uef-input-group:before,
+  body.gns-inspect uef-textarea>.uef-input-group:before,
+  body.gns-inspect uef-time>.uef-input-group:before,
+  body.gns-inspect uef-timezone>.uef-input-group:before,
   body.gns-inspect uef-username>div:after,
-  body.gns-inspect uef-zip>uef-textbox>uef-input-wrapper>div:before,
-  body.gns-inspect uef-required-info>p:after, uef-optional-info>p:after,
+  body.gns-inspect uef-zip>.uef-input-group:before,
+  body.gns-inspect uef-required-info>p:after,
+  body.gns-inspect uef-optional-info>p:after,
   body.gns-inspect uef-repeater>div:after,
-  body.gns-inspect uef-show-hide>div:after,
+  body.gns-inspect uef-show-hide:after,
+  body.gns-inspect uef-link[type=add]>a:before,
+  body.gns-inspect uef-videolink>a:after,
   body.gns-inspect uef-tooltip>a:after,
   body.gns-inspect uef-modal>div:after,
   body.gns-inspect uef-form-controls>div:after,
-  body.gns-inspect uef-subnav>div:after,
+  body.gns-inspect uef-subnav>nav:before,
   body.gns-inspect uef-badge>span:after,
-  body.gns-inspect uef-error-summary>div:after,
+  body.gns-inspect uef-error-summary>div>uef-notice>div:after,
   body.gns-inspect uef-input-error>div:after,
+  body.gns-inspect uef-error-summary>.uef-notice:before,
   body.gns-inspect uef-notice>div:after,
+  body.gns-inspect .uef-flag:before,
+  body.gns-inspect uef-progress>.uef-input-group:before,
   body.gns-inspect uef-optional-info:after,
   body.gns-inspect uef-required-info:after,
-  body.gns-inspect uef-subnav>div:before,
-  body.gns-inspect uef-table>div:after
+  body.gns-inspect uef-table>div:after,
+  body.gns-inspect uef-input-readonly>.uef-input-group:before,
+  body.gns-inspect .uef-grid_unit_inner:before
   {
     float: right;
     font-size: 0.8em !important;
     padding: 0 .5em 0 .5em;
-    margin: 2px 2px 0 0;
+    margin: 1px 2px 0 0;
     border: 1px solid purple;
     border-top: none;
     border-radius: 5px;
@@ -683,15 +703,22 @@ body.gns-inspect>uef-app:after {
 
   /* pull the Pattern Name up a little on these patterns */
   body.gns-inspect uef-error-summary>div:after,
-  body.gns-inspect uef-notice>div:after,
-  body.gns-inspect  uef-show-hide>div:after {
+  body.gns-inspect uef-notice>div:after {
     margin-top: -12px !important;
+  }
+  body.gns-inspect uef-show-hide:after {margin-top: -22px;}
+  body.gns-inspect .uef-input-group_error-list:after {margin-top: -24px;}
+
+  body.gns-inspect .uef-grid_unit_inner:before {
+    margin-top: 1px !important;
+    margin-left: 1px !important;
+    color: yellow;
+    z-index: 1000;
   }
 
   /* Link pattern names should display slightly differently */
   body.gns-inspect uef-link>a:after
   {
-    /*float: right;*/
     font-size: 0.8em !important;
     padding: 0 .5em 0 .5em;
     margin: 2px 2px 0 0;
@@ -707,6 +734,7 @@ body.gns-inspect>uef-app:after {
     border: none !important;
     background: transparent !important;
   }
+  body.gns-inspect uef-videolink>a:after {height: 1.5em;}
 
   /* Display the Page Template type at the top left of the page */
   body.gns-inspect[data-uefID*="uef-tmpl"]:before {
@@ -728,20 +756,20 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-addressDomestic:before {content: "Address (US)";}
   body.gns-inspect div[data-uefID="uef-in-adrsUS"]:before {content: "Address (US)";}
-  body.gns-inspect uef-address[data-uefid="uef-in-address"]>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Address (US)" !important;}
+  body.gns-inspect uef-address>.uef-input-group:before {content: "\02605 \0000a0 Address (US)" !important;}
 
   body.gns-inspect div.uef-addressInternational:before {content: "Address (Intl)";}
   body.gns-inspect div[data-uefID="uef-in-adrsIntl"]:before {content: "Address (Intl)";}
-  body.gns-inspect uef-address[data-uefid="uef-in-addressintl"]>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Address (Intl)" !important;}
+  body.gns-inspect uef-address[domestic-country-value="US"]>.uef-input-group:before {content: "\02605 \0000a0 Address (Intl)" !important;}
 
   body.gns-inspect div.uef-amount:before {content: "Amount";}
   body.gns-inspect div[data-uefID="uef-in-amt"]:before {content: "Amount";}
-  body.gns-inspect uef-amount>uef-input-wrapper>div:before {content: "\02605 \0000a0 Amount" !important;}
+  body.gns-inspect uef-amount>.uef-input-group:before {content: "\02605 \0000a0 Amount" !important;}
 
   body.gns-inspect div.uef-bankInformation:before {content: "Bank Information (US)";}
   body.gns-inspect div[data-uefID="uef-in-bnkInfo"]:before {content: "Bank Information (US)";}
   body.gns-inspect div[data-uefID="uef-in-bnkInfoIntl"]:before {content: "Bank Information (Intl)";}
-  body.gns-inspect uef-bank-info>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Bank Information" !important;}
+  body.gns-inspect uef-bank-info>.uef-input-group:before {content: "\02605 \0000a0 Bank Information" !important;}
 
   body.gns-inspect div.uef-checkbox:before {content: "Check Box";}
   body.gns-inspect div[data-uefID="uef-in-chkBx"]:before {content: "Check Box";}
@@ -751,52 +779,48 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect div[data-uefID="uef-in-chkLst"]:before {content: "Check List";}
   body.gns-inspect uef-checklist>uef-input-wrapper>div:before {content: "\02605 \0000a0 Check List" !important;}
 
-  body.gns-inspect uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Compound" !important;}
+  body.gns-inspect uef-compound>.uef-input-group:before {content: "\02605 \0000a0 Compound" !important;}
 
   body.gns-inspect div.uef-country:before {content: "Country";}
   body.gns-inspect div[data-uefID="uef-in-cntryCrnt"]:before {content: "Country";}
   body.gns-inspect div[data-uefID="uef-in-cntryHst"]:before {content: "Country (Historical)";}
-  body.gns-inspect uef-country>uef-droplist>uef-input-wrapper>div:before {content: "\02605 \0000a0 Country" !important;}
+  body.gns-inspect uef-country>.uef-input-group:before {content: "\02605 \0000a0 Country" !important;}
 
   body.gns-inspect div.uef-creditCard:before {content: "Credit Card";}
   body.gns-inspect div[data-uefID="uef-in-cc"]:before {content: "Credit Card";}
-  body.gns-inspect uef-credit-card>div:before {content: "\02605 \0000a0 Credit Card" !important;}
+  body.gns-inspect uef-credit-card>.uef-input-group:before {content: "\02605 \0000a0 Credit Card" !important;}
 
   body.gns-inspect div.uef-date:before {content: "Date";}
   body.gns-inspect div[data-uefID="uef-in-dtEvnt"]:before {content: "Date";}
   body.gns-inspect div[data-uefID="uef-in-dtDrpLst"]:before {content: "Date";}
   body.gns-inspect div[data-uefID="uef-in-dtTxtBx"]:before {content: "Date (Text Field)";}
-  body.gns-inspect uef-date>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Date" !important;}
-
-  body.gns-inspect div[data-uefID="uef-in-dtPkr"]:before {content: "Date (Calendar)";}
-  body.gns-inspect div[data-uefID="uef-in-dtPkrRng"]:before {content: "Date Calendar (Range)";}
-  body.gns-inspect uef-calendar>div:before {content: "\02605 \0000a0 Date (Calendar)" !important;}
+  body.gns-inspect uef-date>.uef-input-group:before {content: "\02605 \0000a0 Date" !important;}
 
   body.gns-inspect div.uef-dropList:before {content: "Drop List";}
   body.gns-inspect div[data-uefID="uef-in-drpLst"]:before {content: "Drop List";}
-  body.gns-inspect uef-droplist>uef-input-wrapper>div:before {content: "\02605 \0000a0 Drop List" !important;}
+  body.gns-inspect uef-droplist>.uef-input-group:before {content: "\02605 \0000a0 Drop List" !important;}
 
   body.gns-inspect div.uef-ein:before {content: "EIN";}
   body.gns-inspect div[data-uefID="uef-in-ein"]:before {content: "EIN";}
-  body.gns-inspect uef-ein>uef-textbox>uef-input-wrapper>div:before {content: "\02605 \0000a0 EIN" !important;}
+  uef-ein>.uef-input-group:before {content: "\02605 \0000a0 EIN" !important;}
 
   body.gns-inspect div.uef-emailAddress:before {content: "Email Address";}
   body.gns-inspect div[data-uefID="uef-in-eml"]:before {content: "Email Address";}
   body.gns-inspect fieldset.uef-emailAddress-Confirm div.uef-emailAddress:before {content: "";} /* suppress 'Email Address' within Email Address with Confirmation pattern */
   body.gns-inspect fieldset[data-uefID="uef-in-eml"]:before {content: "Email Address (Confirmation)"; margin-right: 0 !important;}
-  body.gns-inspect uef-email>uef-textbox>uef-input-wrapper>div:before {content: "\02605 \0000a0 Email Address" !important;}
+  body.gns-inspect uef-email>.uef-input-group:before {content: "\02605 \0000a0 Email Address" !important;}
 
   body.gns-inspect div.uef-file:before {content: "File Upload";}
   body.gns-inspect div[data-uefID="uef-in-file"]:before {content: "File Upload";}
-  body.gns-inspect uef-file-upload>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 File Upload" !important;}
+  body.gns-inspect uef-file-upload>.uef-input-group:before {content: "\02605 \0000a0 File Upload" !important;}
 
   body.gns-inspect div.uef-gender:before {content: "Gender";}
   body.gns-inspect div[data-uefID="uef-in-gndr"]:before {content: "Gender";}
-  body.gns-inspect uef-gender>uef-radiolist>uef-input-wrapper>div:before {content: "\02605 \0000a0 Gender" !important;}
+  body.gns-inspect uef-gender>uef-radiolist>.uef-input-group:before {content: "\02605 \0000a0 Gender" !important;}
 
   body.gns-inspect div.uef-name:before {content: "Name";}
   body.gns-inspect div[data-uefID="uef-in-nm"]:before {content: "Name";}
-  body.gns-inspect uef-name>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Name" !important;}
+  body.gns-inspect uef-name>.uef-input-group:before {content: "\02605 \0000a0 Name" !important;}
 
   body.gns-inspect fieldset.uef-password-create div.uef-password-enter:before {content: none;} /* turn off embedded Password Enter pattern */
   body.gns-inspect fieldset.uef-password-create:before {content: "Password (Create)"; margin-right: 0 !important;}
@@ -804,46 +828,50 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-password-enter:before {content: "Password (Enter)";}
   body.gns-inspect div[data-uefID="uef-in-pw"]:before {content: "Password (Enter)";}
-  body.gns-inspect uef-password>uef-input-wrapper>div:before {content: "\02605 \0000a0 Password" !important;}
+  body.gns-inspect uef-password>.uef-input-group:before {content: "\02605 \0000a0 Password" !important;}
 
   body.gns-inspect div.uef-phoneDomestic:before {content: "Phone (US)";}
   body.gns-inspect div[data-uefID="uef-in-phnUS"]:before {content: "Phone (US)";}
-  body.gns-inspect uef-phone[data-uefid="uef-in-phone"]>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Phone (US)" !important;}
+  body.gns-inspect uef-phone>.uef-input-group:before {content: "\02605 \0000a0 Phone" !important;}
 
   body.gns-inspect div.uef-phoneInternational:before {content: "Phone (Intl)";}
   body.gns-inspect div[data-uefID="uef-in-phnIntl"]:before {content: "Phone (Intl)";}
-  body.gns-inspect uef-phone[data-uefid="uef-in-phoneintl"]>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Phone (Intl)" !important;}
 
   body.gns-inspect div.uef-place:before {content: "Place (of Event)";}
   body.gns-inspect div[data-uefID="uef-in-plcEvnt"]:before {content: "Place (of Event)";}
-  body.gns-inspect uef-place>uef-compound>uef-input-wrapper>div:before {content: "\02605 \0000a0 Place (of Event)" !important;}
+  body.gns-inspect uef-place>.uef-input-group:before {content: "\02605 \0000a0 Place (of Event)" !important;}
 
   body.gns-inspect div.uef-radioList:before {content: "Radio List";}
   body.gns-inspect div[data-uefID="uef-in-rdoLst"]:before {content: "Radio List";}
-  body.gns-inspect uef-radiolist>uef-input-wrapper>div:before {content: "\02605 \0000a0 Radio List" !important;}
+  body.gns-inspect uef-radiolist>.uef-input-group:before {content: "\02605 \0000a0 Radio List" !important;}
 
   body.gns-inspect div.uef-ssn:before {content: "SSN";}
   body.gns-inspect div[data-uefID="uef-in-ssn"]:before {content: "SSN";}
-  body.gns-inspect uef-ssn>uef-textbox>uef-input-wrapper>div:before {content: "\02605 \0000a0 SSN" !important;}
+  body.gns-inspect uef-ssn>.uef-input-group:before {content: "\02605 \0000a0 SSN" !important;}
 
   body.gns-inspect div.uef-state:before {content: "State";}
   body.gns-inspect div[data-uefID="uef-in-st"]:before {content: "State";}
-  body.gns-inspect uef-state>uef-droplist>uef-input-wrapper>div:before {content: "\02605 \0000a0 State" !important;}
+  body.gns-inspect uef-state>.uef-input-group:before {content: "\02605 \0000a0 State" !important;}
 
   body.gns-inspect div.uef-textArea:before {content: "Text Area";}
   body.gns-inspect div[data-uefID="uef-in-txtAra"]:before {content: "Text Area";}
-  body.gns-inspect uef-textarea>uef-input-wrapper>div:before {content: "\02605 \0000a0 Text Area" !important;}
+  body.gns-inspect uef-textarea>.uef-input-group:before {content: "\02605 \0000a0 Text Area" !important;}
 
   body.gns-inspect div.uef-textBox:before {content: "Text Box";}
   body.gns-inspect div[data-uefID="uef-in-txtBx"]:before {content: "Text Box";}
-  body.gns-inspect uef-textbox>uef-input-wrapper>div:before {content: "\02605 \0000a0 Text Box" !important;}
+  body.gns-inspect :not(uef-datepicker)>uef-textbox>.uef-input-group:before {content: "\02605 \0000a0 Text Box";}
+
+/* Date (Calendar) identification need to go after Text Box, since they share very, very similar markup */
+body.gns-inspect div[data-uefID="uef-in-dtPkr"]:before {content: "Date (Calendar)";}
+body.gns-inspect div[data-uefID="uef-in-dtPkrRng"]:before {content: "Date Calendar (Range)";}
+body.gns-inspect uef-datepicker>uef-textbox:before {content: "\02605 \0000a0 Date (Calendar)" !important;}
 
   body.gns-inspect fieldset[data-uefID="uef-in-time"]:before {content: "Time";}
-  body.gns-inspect uef-time>div:before {content: "\02605 \0000a0 Time" !important;}
+  body.gns-inspect uef-time>.uef-input-group:before {content: "\02605 \0000a0 Time" !important;}
 
   body.gns-inspect div.uef-timeZone:before {content: "Time Zone";}
   body.gns-inspect div[data-uefID="uef-in-tmZn"]:before {content: "Time Zone";}
-  body.gns-inspect uef-timezone>div:before {content: "\02605 \0000a0 Timezone" !important;}
+  body.gns-inspect uef-timezone>.uef-input-group:before {content: "\02605 \0000a0 Timezone" !important;}
 
   body.gns-inspect div.uef-username:before {content: "Username (Create)";}
   body.gns-inspect div[data-uefID="uef-in-usrNmCr"]:before {content: "Username (Create)";}
@@ -851,13 +879,19 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-selectYesNo:before {content: "Yes/No";}
   body.gns-inspect div[data-uefID="uef-in-ysNo"]:before {content: "Yes/No";}
-  body.gns-inspect uef-radiolist[yes-no]>uef-input-wrapper>div:before {content: "\02605 \0000a0 Yes/No" !important;}
+  body.gns-inspect uef-radiolist[yes-no]>.uef-input-group:before {content: "\02605 \0000a0 Yes/No" !important;}
 
   body.gns-inspect div.uef-zipCode:before {content: "ZIP Code";}
   body.gns-inspect div[data-uefID="uef-in-zip"]:before {content: "ZIP Code";}
-  body.gns-inspect uef-zip>uef-textbox>uef-input-wrapper>div:before {content: "\02605 \0000a0 ZIP Code" !important;}
+  body.gns-inspect uef-zip>.uef-input-group:before {content: "\02605 \0000a0 ZIP Code" !important;}
+
+  body.gns-inspect .uef-readOnly:before {content: "Read-Only";}
+  body.gns-inspect uef-input-readonly>.uef-input-group:before {content: "\02605 \0000a0 Read-Only";}
 
   /* ------------------------ Notices Patterns -------------------------------- */
+
+  body.gns-inspect .uef-flag:before {content: "\02605 \0000a0 Flag" !important;}
+
   body.gns-inspect span.uef-badge:after {content: "Badge"; margin-right: 0;}
   body.gns-inspect uef-badge>span:after {content: "\02605 \0000a0 Badge" !important;}
 
@@ -871,11 +905,11 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div#uef-errorSummary:before {content: "Error Summary"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-errSmry"]:before {content: "Error Summary"; margin-right: 0 !important;}
-  body.gns-inspect uef-error-summary>div:after {content: "\02605 \0000a0 Error Summary" !important; margin-right: 0 !important;}
+  body.gns-inspect uef-error-summary>.uef-notice:before {content: "\02605 \0000a0 Error Summary" !important; margin-right: 0 !important;}
 
   body.gns-inspect ul.uef-errorField:before {content: "Error Field"; margin-right: 0 !important;}
   body.gns-inspect ul[data-uefID="uef-no-errFld"]:before {content: "Error Field"; margin-right: 0 !important;}
-  body.gns-inspect uef-input-error>div:after {content: "\02605 \0000a0 Error Field" !important;}
+  body.gns-inspect .uef-input-group_error-list:after {content: "\02605 \0000a0 Error Field" !important;}
 
   body.gns-inspect div.uef-agreement div.uef-checkbox:before {content: "";} /* suppress 'Checkbox' pattern label inside of Agreement pattern */
   body.gns-inspect div.uef-agreement:before {content: "Agreement"; margin-right: 0 !important;}
@@ -883,30 +917,34 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-confirmation:before {content: "Confirmation"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-cnfrm"]:before {content: "Confirmation"; margin-right: 0 !important;}
-  body.gns-inspect uef-notice[type=success]>div:after {content: "\02605 \0000a0 Success" !important;}
+  body.gns-inspect uef-notice[type=success]>div:before {content: "\02605 \0000a0 Success" !important;}
 
   body.gns-inspect div.uef-important:before {content: "Important"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-imp"]:before {content: "Important"; margin-right: 0 !important;}
-  body.gns-inspect uef-notice[type=warning]>div:after {content: "\02605 \0000a0 Warning" !important;}
+  body.gns-inspect uef-notice[type=warning]>div:before {content: "\02605 \0000a0 Warning" !important;}
 
   body.gns-inspect div.uef-information:before {content: "Information"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-info"]:before {content: "Information"; margin-right: 0 !important;}
-  body.gns-inspect uef-notice[type=info]>div:after {content: "\02605 \0000a0 Information" !important;}
+  body.gns-inspect uef-notice[type=info]>.uef-notice:before {content: "\02605 \0000a0 Information" !important;}
 
   body.gns-inspect div.uef-danger:after {content: "Danger"; margin-right: 0 !important;}
-  body.gns-inspect uef-notice[type=danger]>div:after {content: "\02605 \0000a0 Danger" !important;}
+  body.gns-inspect uef-notice[type=danger]>.uef-notice:before {content: "\02605 \0000a0 Danger" !important;}
 
   body.gns-inspect div.uef-privacy:before {content: "Privacy"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-prvcy"]:before {content: "Privacy"; margin-right: 0 !important;}
 
   body.gns-inspect div.uef-reEntry:before {content: "Re-Entry Number"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-no-infoRntry"]:before {content: "Re-Entry Number"; margin-right: 0 !important;}
+  body.gns-inspect uef-notice[header*=Re-Entry]>.uef-notice:before {content: "\02605 \0000a0Re-Entry Number" !important;}
+
+  body.gns-inspect uef-progress>.uef-input-group:before {content: "\02605 \0000a0 Progress" !important;}
 
   /* ------------------------ Container Patterns ------------------------------ */
 
   body.gns-inspect div.uef-container:before {content: "Basic Container"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-co-bsc"]:before {content: "Basic Container"; margin-right: 0 !important;}
   body.gns-inspect uef-container>div:before {content: "\02605 \0000a0 Basic Container" !important; margin-right: 0 !important;}
+  body.gns-inspect .layout-noheader-uef_container_basic_container:before {content: "Basic Container"; margin-right: 0 !important;}
 
   body.gns-inspect div.uef-summary div.uef-container:before {content: "";}
   body.gns-inspect div.uef-summary:before {content: "Summary"; margin-right: 0 !important;}
@@ -923,7 +961,7 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-tabbed:before {content: "Tabs"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-co-tabs"]:before {content: "Tabs"; margin-right: 0 !important;}
-  body.gns-inspect uef-tabs>div:before {content: "\02605 \0000a0 Tabs" !important;}
+  body.gns-inspect .uef-container-tabs_list:before {content: "\02605 \0000a0 Tabs" !important;}
 
   body.gns-inspect div.uef-secondary:before {content: "Secondary Container"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-co-scndry"]:before {content: "Secondary Container"; margin-right: 0 !important;}
@@ -976,11 +1014,13 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect uef-modal[type=lightbox]>div:after {content: "\02605 \0000a0 Lightbox" !important;}
 
-  body.gns-inspect uef-modal[type=document-viewer]>div:after {content: "\02605 \0000a0 Document Viewer" !important;}
+  body.gns-inspect uef-modal[type=lightbox]>uef-modal-controls:after {content: "\02605 \0000a0 Document Viewer" !important;}
 
   body.gns-inspect uef-modal[type=popover]>div:after {content: "\02605 \0000a0 Popover" !important;}
 
   /* ------------------------ Link Patterns ----------------------------------- */
+
+  body.gns-inspect uef-link[type=add]>a:after {content: "\02605 \0000a0 Add Another" !important;}
 
   body.gns-inspect a[rel="action"]:after {content: "Action Link";}
   body.gns-inspect a[data-uefID="uef-li-actn"]:after {content: "Action Link";}
@@ -1022,7 +1062,7 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect div[data-uefID="uef-li-prntRgn"]:before {content: "Print (Region)"; margin-right: 0 !important;}
 
   body.gns-inspect div[data-uefID="uef-li-shwHd"]:before {content: "Show/Hide"; margin-right: 0 !important;}
-  body.gns-inspect uef-show-hide>div:after {content: "\02605 \0000a0 Show/Hide" !important;}
+  body.gns-inspect uef-show-hide:after {content: "\02605 \0000a0 Show/Hide" !important;}
 
   body.gns-inspect uef-tooltip>a:after {content: "\02605 \0000a0 Tooltip" !important;}
 
@@ -1031,6 +1071,7 @@ body.gns-inspect>uef-app:after {
 
   body.gns-inspect div.uef-videoLink:before {content: "Video Teaser"; margin-right: 0 !important;}
   body.gns-inspect div[data-uefID="uef-li-vdTsr"]:before {content: "Video Teaser"; margin-right: 0 !important;}
+  body.gns-inspect uef-videolink>a:after {content: "\02605 \0000a0 Video Teaser" !important;}
 
   body.gns-inspect uef-link[type=zip]>a:before {content: none !important;}
   body.gns-inspect uef-link[type=zip]>a:after {content: "\02605 \0000a0 Zip" !important;}
@@ -1041,9 +1082,8 @@ body.gns-inspect>uef-app:after {
   body.gns-inspect input[data-uefID="uef-btn-std"]:after {content: "Standard Button";}
   body.gns-inspect input.uef-btn-secondary:after {content: "Secondary Button";}
   body.gns-inspect uef-button>button:after {content: "\02605 \0000a0 Button";}
-  body.gns-inspect uef-button>button[data-action=add]:after {content: "\02605 \0000a0 Add Another" !important;}
-
   body.gns-inspect uef-dropmenu>button:after {content: "\02605 \0000a0 Drop Menu";}
+  body.gns-inspect uef-button[label*=Add]>button:after {content: "\02605 \0000a0 Add Another";}
 
   /* ------------------------ Page Template Patterns -------------------------- */
   body.gns-inspect[data-uefID="uef-theme-std"]:before {content: "Standard Page";}
@@ -1053,3 +1093,4 @@ body.gns-inspect>uef-app:after {
 
   /* ----------------------------- Grids --------------------------------------- */
   body.gns-inspect uef-grid-unit {outline: 1px solid orangered !important;}
+  body.gns-inspect .uef-grid_unit_inner:before {content: "\02605 \0000a0 Grid";}
