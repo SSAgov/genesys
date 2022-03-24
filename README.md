@@ -40,7 +40,7 @@ Tutorials
 ---------
 
 - Getting Started
--- Creating Your First Prototype
+  -- Creating Your First Prototype
 
 Features
 --------
