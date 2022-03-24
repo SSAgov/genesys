@@ -39,26 +39,6 @@ Genesys provides tutorials to lead you through all supported functionality, incl
 
 You can find these tutorials in the <code>tutorials</code> folder.
 
-What is ‘Designing in the Browser’?
------------------------------------
-
-Designing in the Browser is a methodology that directly uses the browser as the design canvas. What does this mean? It means you will be using either the browser directly, or other pieces of software that interact directly with the browser to realize your design. The design lives directly in the language (HTML+CSS) and medium (browser) of the web.
-
-Benefits
---------
-
-- Requires minimal skills to get started (Just HTML)
-- Creates accessible prototypes
-- Once learned, it provides a much faster prototyping experience than visual drag-and-drop tools.
-- Create dynamic designs that flex and change depending on the width of the screen
-- Create designs that interact and behave exactly as deployed
-- View desktop and mobile versions of a design at the same time
-- It Makes design decisions based on the actual browser behavior, rather than just assumptions in our designs. Think of it as deciding in the browser.
-- Allows us to test early and get feedback on reality—not assumptions from abstracted tool output. As soon as a single piece of design is in the browser, it can be tested.
-- Sets expectations early and allows the design to grow iteratively and organically.
-- Code used in prototypes can serve as a basis for production ready code.
-- Ultimately, it allows us to place content over form and embrace the fluidity of the web and the diaspora of devices.
-
 Features
 --------
 
@@ -112,23 +92,6 @@ Rapidly create realistic, fake data specific in your designs with the integrated
 
 **UX Measurements**<br />
 Integrated support for industry standard SEQ, SUS, and TLX feedback.
-
-The Genesys Toolbar
--------------------
-
-The integrated Genesys toolbar contains the following functionality:
-
-- Show/Hide Layout Grids
-- Show/Hide Ruler
-- Show/Hide Objects
-- Show Object Properties/Styles
-- Show/Hide Notes
-- Grayscale Page
-- Responsive Resize
-- Edit Page
-- Automated UI Tester
-- Automated Accessibility Checker
-- Responsive Web Design Tester
 
 Design Systems Support
 ----------------------
