@@ -474,6 +474,16 @@ if (typeof GENESYS == "undefined" || !GENESYS) {var GENESYS = {};}
             btnClear.className = "mv-clear"
             toolbar.appendChild(btnClear);
 
+            // Help
+            var btnHelp = document.createElement('button');
+            btnHelp.innerHTML = "<i class='fas fa-question-circle'></i>";
+            btnHelp.title = "Help";
+            btnHelp.id = "gns-help";
+            btnHelp.addEventListener("click", function() {
+              window.open("https://ssagov.github.io/genesys/#getting-started");
+            });
+            toolbar.appendChild(btnHelp);
+
             // Hide Toolbar Button
             var btnHide = document.createElement('button');
             btnHide.innerHTML = "<i class='fas fa-window-close'></i>";
