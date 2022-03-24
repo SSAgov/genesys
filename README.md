@@ -40,7 +40,7 @@ Tutorials
 ---------
 
 - **Getting Started**
-  - Creating Your First Prototype
+  - [Creating Your First Prototype](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/01-Creating-Your-First-Prototype.md)
   - Using the Genesys Toolbar
   - Adding Tables Quickly
   - Adding Notes & Walkthroughs
