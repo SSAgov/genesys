@@ -39,26 +39,8 @@ Once you have everything installed, you're ready to go. Start with our tutorials
 Tutorials
 ---------
 
-<ul>
-<li>Getting Started
-  <ul>
-    <li>Creating Your First Prototype</li>
-    <li>Using the Genesys Toolbar</li>
-    <li>Adding Tables Quickly</li>
-    <li>Adding Notes & Walkthroughs</li>
-  </ul>
-</li>
-<li>Flow Diagrams
-  <ul>
-    <li>Create a Flow Diagram</li>
-  </ul>
-</li>
-<li>Static Wireframes
-  <ul>
-    <li>Create a Static Wireframe</li>
-  </ul>
-</li>
-</ul>
+- Getting Started
+-- Creating Your First Prototype
 
 Features
 --------
