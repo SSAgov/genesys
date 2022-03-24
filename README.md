@@ -41,37 +41,37 @@ Tutorials
 
 - **Getting Started**
   - [Creating Your First Prototype](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/01-Creating-Your-First-Prototype.md)
-  - Using the Genesys Toolbar
-  - Adding Tables Quickly
-  - Adding Notes & Walkthroughs
+  - [Using the Genesys Toolbar](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/02-Using-the-Genesys-Toolbar.md)
+  - [Adding Tables Quickly](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/03-Add-Tables-Quickly.md)
+  - [Adding Notes & Walkthroughs](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/04-Adding-Notes-and-Walkthroughs.md)
 - **Flow Diagrams**
-  - Create a Flow Diagram
+  - [Create a Flow Diagram](https://github.com/SSAgov/genesys/blob/main/tutorials/02-Flow-Diagrams/01-Create-a-Flow-Diagram.md)
 - **Static Wireframes**
-  - Create a Static Wireframe
+  - [Create a Static Wireframe](https://github.com/SSAgov/genesys/blob/main/tutorials/03-Static-Wireframes/01-Create-a-Static-Wireframe.md)
 - **Interactive Prototyping**
-  - Create a Click-Thru Prototype
-  - Add Data Persistence
-  - Add Conditional Logic
-  - Add User Roles
+  - [Create a Click-Thru Prototype](https://github.com/SSAgov/genesys/blob/main/tutorials/04-Interactive-Prototyping/01-Create-a-Click-Thru-Prototype.md)
+  - [Add Data Persistence](https://github.com/SSAgov/genesys/blob/main/tutorials/04-Interactive-Prototyping/02-Add-Data-Persistence.md)
+  - [Add Conditional Logic](https://github.com/SSAgov/genesys/blob/main/tutorials/04-Interactive-Prototyping/03-Add-Conditional-Logic.md)
+  - [Add User Roles](https://github.com/SSAgov/genesys/blob/main/tutorials/04-Interactive-Prototyping/04-Add-User-Roles.md)
 - **Multi-Lingual Prototyping**
-  - Adding Multiple Languages
+  - [Adding Multiple Languages](https://github.com/SSAgov/genesys/blob/main/tutorials/05-Multi-Lingual-Prototyping/01-Adding-Multiple-Languages.md)
 - **Collaboration & Version Control**
-  - Using Version Control
+  - [Using Version Control](https://github.com/SSAgov/genesys/blob/main/tutorials/06-Collaboration-and-Version-Control/01-Using-Version-Control.md)
 - **Prototyping with UEF**
-  - Using UEF Snippets
-  - Adding Sub-Navigation
+  - [Using UEF Snippets](https://github.com/SSAgov/genesys/blob/main/tutorials/07-Prototyping-with-UEF/01-Using-UEF-Snippets.md)
+  - [Adding Sub-Navigation](https://github.com/SSAgov/genesys/blob/main/tutorials/07-Prototyping-with-UEF/02-Adding-Sub-Navigation.md)
 - **Advanced Topics**
-  - Adding Analytics
-  - Adding Animation
-  - Adding Realistic Data
-  - Creating Prototype Walkthroughs
-  - Creating a Site Map
-  - Measuring Perceived Usability
-  - Publishing Prototypes
-  - Recording User Test Sessions
-  - Starting with an Existing Page
-  - Using Master Page Components
-  - Using Virtual Pages
+  - [Adding Analytics](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Adding-Analytics.md)
+  - [Adding Animation](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Adding-Animation.md)
+  - [Adding Realistic Data](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Adding-Realistic-Data.md)
+  - [Creating Prototype Walkthroughs](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Creating-Prototype-Walkthroughs.md)
+  - [Creating a Site Map](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Creating-a-Sitemap.md)
+  - [Measuring Perceived Usability](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Measuring-Perceived-Usability.md)
+  - [Publishing Prototypes](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Publishing-Prototypes.md)
+  - [Recording User Test Sessions](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Recording-User-Test-Sessions.md)
+  - [Starting with an Existing Page](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Starting-with-Existing-Page.md)
+  - [Using Master Page Components](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Using-Master-Page-Components.md)
+  - [Using Virtual Pages](https://github.com/SSAgov/genesys/blob/main/tutorials/08-Advanced-Topics/Using-Virtual-Pages.md)
 
 Features
 --------
