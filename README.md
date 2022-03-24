@@ -39,28 +39,28 @@ Once you have everything installed, you're ready to go. Start with our tutorials
 Tutorials
 ---------
 
-- Getting Started
+- **Getting Started**
   - Creating Your First Prototype
   - Using the Genesys Toolbar
   - Adding Tables Quickly
   - Adding Notes & Walkthroughs
-- Flow Diagrams
+- **Flow Diagrams**
   - Create a Flow Diagram
-- Static Wireframes
+- **Static Wireframes**
   - Create a Static Wireframe
-- Interactive Prototyping
+- **Interactive Prototyping**
   - Create a Click-Thru Prototype
   - Add Data Persistence
   - Add Conditional Logic
   - Add User Roles
-- Multi-Lingual Prototyping
+- **Multi-Lingual Prototyping**
   - Adding Multiple Languages
-- Collaboration & Version Control
+- **Collaboration & Version Control**
   - Using Version Control
-- Prototyping with UEF
+- **Prototyping with UEF**
   - Using UEF Snippets
   - Adding Sub-Navigation
-- Advanced Topics
+- **Advanced Topics**
   - Adding Analytics
   - Adding Animation
   - Adding Realistic Data
