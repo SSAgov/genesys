@@ -32,6 +32,8 @@ Getting Started
 3. In VSCode, select the Extensions panel, search for and install the `Genesys` extension and the `Design in the Browser` extension from the Microsoft Extensions Marketplace.
 4. Optional: Download and install [Git](https://git-scm.com/) in order to enable version control.
 
+Once you have everything installed, you're ready to go. Start with our tutorials.
+
 Tutorials
 ---------
 
