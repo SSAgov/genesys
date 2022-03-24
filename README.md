@@ -11,18 +11,18 @@ Additional features include multi-lingual support, automated walk-throughs, on-s
 
 *Note that Genesys allows you to create and test fully accessible, Section 508-compliant prototypes.*
 
+Demo
+----
+
+- [Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
+
 Requirements
 ------------
 
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 - [Genesys Extension](https://github.com/SSAgov/genesys-vscode-extension) for Visual Studio Code
 - [Design in the Browser Extension](https://github.com/craigcecil/vscode-design-in-browser-pack) for Visual Studio Code
-- Any modern browser
-
-Demo
-----
-
-- [Genesys Demo](https://ssagov.github.io/genesys/demo/genesys-demo.html)
+- Any modern browser (Chrome, Edge, Safari, etc.)
 
 Getting Started
 ---------------
@@ -31,6 +31,13 @@ Getting Started
 2. Start Visual Studio Code and select **File** > **Open Folder...** and then select `Genesys` from the location you extracted it to.
 3. In VSCode, select the Extensions panel, search for and install the `Genesys` extension and the `Design in the Browser` extension from the Microsoft Extensions Marketplace.
 4. Optional: Download and install [Git](https://git-scm.com/) in order to enable version control.
+
+Tutorials
+---------
+
+Genesys provides tutorials to lead you through all supported functionality, including walking you through your first design in the browser session.
+
+You can find these tutorials in the <code>tutorials</code> folder.
 
 What is ‘Designing in the Browser’?
 -----------------------------------
@@ -148,13 +155,6 @@ Genesys provides built-in support for the following design systems and framework
 - [U.S. Web Design Standards](https://standards.usa.gov/)
 
 Additionally, Genesys contains built-in support for [WebSlides](https://webslides.tv/#slide=1) and [Reveal.js](https://revealjs.com/) for creating web-based presentations.
-
-Tutorials
----------
-
-Genesys provides tutorials to lead you through all supported functionality, including walking you through your first design in the browser session.
-
-You can find these tutorials in the <code>tutorials</code> folder.
 
 Contributing
 ------------
