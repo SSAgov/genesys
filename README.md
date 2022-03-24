@@ -41,6 +41,37 @@ Tutorials
 
 - Getting Started
   - Creating Your First Prototype
+  - Using the Genesys Toolbar
+  - Adding Tables Quickly
+  - Adding Notes & Walkthroughs
+- Flow Diagrams
+  - Create a Flow Diagram
+- Static Wireframes
+  - Create a Static Wireframe
+- Interactive Prototyping
+  - Create a Click-Thru Prototype
+  - Add Data Persistence
+  - Add Conditional Logic
+  - Add User Roles
+- Multi-Lingual Prototyping
+  - Adding Multiple Languages
+- Collaboration & Version Control
+  - Using Version Control
+- Prototyping with UEF
+  - Using UEF Snippets
+  - Adding Sub-Navigation
+- Advanced Topics
+  - Adding Analytics
+  - Adding Animation
+  - Adding Realistic Data
+  - Creating Prototype Walkthroughs
+  - Creating a Site Map
+  - Measuring Perceived Usability
+  - Publishing Prototypes
+  - Recording User Test Sessions
+  - Starting with an Existing Page
+  - Using Master Page Components
+  - Using Virtual Pages
 
 Features
 --------
