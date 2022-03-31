@@ -44,6 +44,7 @@ Tutorials
   - [Using the Genesys Toolbar](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/02-Using-the-Genesys-Toolbar.md)
   - [Adding Tables Quickly](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/03-Add-Tables-Quickly.md)
   - [Adding Notes & Walkthroughs](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/04-Adding-Notes-and-Walkthroughs.md)
+  - [Design Tips when using VSCode](https://github.com/SSAgov/genesys/blob/main/tutorials/01-Getting-Started/05-Design-Tips-for-VSCode.md)
 - **Flow Diagrams**
   - [Create a Flow Diagram](https://github.com/SSAgov/genesys/blob/main/tutorials/02-Flow-Diagrams/01-Create-a-Flow-Diagram.md)
 - **Static Wireframes**
