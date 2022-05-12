@@ -3,7 +3,7 @@ Add Tables Quickly
 
 This tutorial will show you how to add HTML tables to your prototype quickly and efficiently.
 
-To quickly add a table to your prototype, the Emmet syntax is your best friend.
+To quickly add a table to your prototype, the [Emmet](https://docs.emmet.io/cheat-sheet/) syntax is your best friend.
 
 Example
 -------
@@ -14,7 +14,7 @@ Add a table with 5 columns and 10 rows.
 table>tr*10>td*5
 ````
 
-After typing the above Emmet command into the editor, press TAB. Here's the result:
+After typing the Emmet command shown above into the editor, press TAB. Here's the result:
 
 ````
 <table>
@@ -96,7 +96,7 @@ Aren't you glad you didn't have to type all that?
 Creating UEF Tables Quickly
 ---------------------------
 
-You can use the Emmet command above to quickly create generic HTML tables. If you want to turn those tables into UEF Tables, then wrap your `table` element within a `div` element with the `uef-table` class:
+You can use the Emmet command above to quickly create generic HTML tables. If you want to turn those tables into UEF Tables (or any other type of framework table), then wrap your `table` element within a `div` element with the `uef-table` class:
 
 ```
 <div class="uef-table">
