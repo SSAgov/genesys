@@ -47,16 +47,26 @@ Adding Interactions with Natural Language
 
 Genesys supports specifying simple interactions using natural language statements, via the open-source UILang library (http://uilang.com/).
 
-You will find the UILang library in the `components\interaction` directory.
+To get started, include the `uilang.js` file in the HEAD of your page, using the `gns-add-uilang` snippet. Next, add a `<code>` block at the bottom of your page, like this:
 
-To get started, include the `uilang.js` file in the HEAD of your page and add a `<code>` block on the page that contains your interaction instructions, such as:
+```
+<code>
+    your UILang interaction instructions go here
+</code>
+```
+
+Finally, write UILang interaction instructions within that `code` block, such as:
 
 ```
 clicking on "#confirm" adds class "show" on "#success"
 ```
 
+Putting it all together, you should have something like this as an example:
+
+```
+<code>
+    clicking on "#confirm" adds class "show" on "#success" 
+</code>
+```
+
 Again, the UILang page at http://uilang.com/ has many more examples of the natural language syntax.
-
-
-
-
